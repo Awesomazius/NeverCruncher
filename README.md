@@ -1,3 +1,10 @@
+# NeverCruncher 1.0
+
+This is Neverball 1.6 with a Reinforced Learning agent written into
+it that plays some Neverball levels. See Readme for instructions and
+the pdf of you are a Developer. 
+
+
 # Neverball
 
 Tilt the  floor to roll a  ball through an obstacle  course within the
