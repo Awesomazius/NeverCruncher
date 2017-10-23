@@ -47,6 +47,8 @@ static int challenge_id;
 
 static void gui_level(int id, int i)
 {
+    
+    
     struct level *l = get_level(i);
 
     const GLubyte *fore = 0;
@@ -115,6 +117,8 @@ static void start_over(int id, int pulse)
 
 static int start_action(int tok, int val)
 {
+  
+
     audio_play(AUD_MENU, 1.0f);
 
     switch (tok)
@@ -158,6 +162,8 @@ static int start_action(int tok, int val)
 
 static int start_gui(void)
 {
+   
+
     int w = video.device_w;
     int h = video.device_h;
     int i, j;
@@ -246,6 +252,8 @@ static int start_gui(void)
 
     return id;
 }
+
+
 
 static int start_enter(struct state *st, struct state *prev)
 {

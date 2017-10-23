@@ -217,18 +217,42 @@ static char *real_path(const char *path)
 
 /*---------------------------------------------------------------------------*/
 
-fs_file fs_open_read(const char *path)
+fs_file fs_open(const char *path, const char *mode)
 {
     fs_file fh;
 
-    if ((fh = calloc(1, sizeof (*fh))))
+    assert((mode[0] == 'r' && !mode[1]) ||
+           (mode[0] == 'w' && (!mode[1] || mode[1] == '+')));
+
+    if ((fh = malloc(sizeof (*fh))))
     {
         char *real;
 
-        if ((real = real_path(path)))
+        fh->handle = NULL;
+
+        switch (mode[0])
         {
-            fh->handle = fopen(real, "rb");
-            free(real);
+        case 'r':
+            if ((real = real_path(path)))
+            {
+                fh->handle = fopen(real, "rb");
+                free(real);
+            }
+
+            break;
+
+        case 'w':
+            if (fs_dir_write)
+            {
+                real = path_join(fs_dir_write, path);
+
+                fh->handle = (mode[1] == '+' ?
+                              fopen(real, "wb") :
+                              fopen(real, "wb+"));
+
+                free(real);
+            }
+            break;
         }
 
         if (!fh->handle)
@@ -237,43 +261,8 @@ fs_file fs_open_read(const char *path)
             fh = NULL;
         }
     }
+
     return fh;
-}
-
-static fs_file fs_open_write_flags(const char *path, int append)
-{
-    fs_file fh = NULL;
-
-    if (fs_dir_write && path && *path)
-    {
-        if ((fh = calloc(1, sizeof (*fh))))
-        {
-            char *real;
-
-            if ((real = path_join(fs_dir_write, path)))
-            {
-                fh->handle = fopen(real, append ? "ab" : "wb");
-                free(real);
-            }
-
-            if (!fh->handle)
-            {
-                free(fh);
-                fh = NULL;
-            }
-        }
-    }
-    return fh;
-}
-
-fs_file fs_open_write(const char *path)
-{
-    return fs_open_write_flags(path, 0);
-}
-
-fs_file fs_open_append(const char *path)
-{
-    return fs_open_write_flags(path, 1);
 }
 
 int fs_close(fs_file fh)
@@ -362,17 +351,15 @@ int fs_eof(fs_file fh)
     return feof(fh->handle);
 }
 
-int fs_size(const char *path)
+int fs_length(fs_file fh)
 {
-    int size = 0;
-    char *real;
+    long len, cur = ftell(fh->handle);
 
-    if ((real = real_path(path)))
-    {
-        size = file_size(real);
-        free(real);
-    }
-    return size;
+    fseek(fh->handle, 0, SEEK_END);
+    len = ftell(fh->handle);
+    fseek(fh->handle, cur, SEEK_SET);
+
+    return len;
 }
 
 /*---------------------------------------------------------------------------*/

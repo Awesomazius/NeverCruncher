@@ -69,7 +69,7 @@ void log_init(const char *name, const char *path)
 {
     if (!log_fp)
     {
-        if ((log_fp = fs_open_append(path)))
+        if ((log_fp = fs_open(path, "w+")))
         {
             /* Printed on first message. */
 

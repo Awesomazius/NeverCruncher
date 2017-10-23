@@ -159,7 +159,7 @@ static struct voice *voice_init(const char *filename, float a)
 
         /* Attempt to open the named Ogg stream. */
 
-        if ((fp = fs_open_read(filename)))
+        if ((fp = fs_open(filename, "r")))
         {
             if (ov_open_callbacks(fp, &V->vf, NULL, 0, callbacks) == 0)
             {
@@ -270,7 +270,7 @@ void audio_init(void)
 
         if (SDL_OpenAudio(&spec, NULL) == 0)
         {
-            audio_state = 1;
+            //audio_state = 1;
             SDL_PauseAudio(0);
         }
         else log_printf("Failure to open audio device (%s)\n", SDL_GetError());

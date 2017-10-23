@@ -19,6 +19,7 @@
 #include "hmd.h"
 #include "common.h"
 
+
 /*---------------------------------------------------------------------------*/
 
 const char *status_to_str(int s)
@@ -205,7 +206,7 @@ void game_view_fly(struct game_view *view, const struct s_vary *vary, float k)
     v_nrm(view->e[2], view->e[2]);
 }
 
-/*---------------------------------------------------------------------------*/
+ /*---------------------------------------------------------------------------*/
 
 void lockstep_clr(struct lockstep *ls)
 {
@@ -216,12 +217,18 @@ void lockstep_clr(struct lockstep *ls)
 void lockstep_run(struct lockstep *ls, float dt)
 {
     ls->at += dt * ls->ts;
-
+    int k=0;
     while (ls->at >= ls->dt)
     {
         ls->step(ls->dt);
         ls->at -= ls->dt;
+        if(k==0){savetimeremaining++;
+            //fprintf(stdout, "Time value is :   %d\n", savetimeremaining);
+        }
+    
+        k++;
     }
+    
 }
 
 void lockstep_scl(struct lockstep *ls, float ts)
@@ -285,5 +292,14 @@ float SPEED_FACTORS[SPEED_MAX] = {
     1.0f * 4,
     1.0f * 8
 };
+
+// JK time remaining fn
+int returns_time_remaining(void){
+    return savetimeremaining;
+}
+
+void reset_time_remaining(void){
+    savetimeremaining=0;
+}
 
 /*---------------------------------------------------------------------------*/

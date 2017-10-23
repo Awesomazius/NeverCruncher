@@ -133,7 +133,7 @@ int lang_load(struct lang_desc *desc, const char *path)
 
         memset(desc, 0, sizeof (*desc));
 
-        if ((fp = fs_open_read(path)))
+        if ((fp = fs_open(path, "r")))
         {
             char buf[MAXSTR];
 

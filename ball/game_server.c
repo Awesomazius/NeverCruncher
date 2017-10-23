@@ -12,6 +12,7 @@
  * General Public License for more details.
  */
 
+#define _POSIX_C_SOURCE 199309L  // needed for my time fn
 #include <SDL.h>
 #include <math.h>
 #include <assert.h>
@@ -30,6 +31,9 @@
 #include "game_proxy.h"
 
 #include "cmd.h"
+#include "st_play.h"
+
+
 
 /*---------------------------------------------------------------------------*/
 
@@ -60,6 +64,7 @@ static int   jump_b = 0;                /* Jump-in-progress flag             */
 static float jump_dt;                   /* Jump duration                     */
 static float jump_p[3];                 /* Jump destination                  */
 
+
 /*---------------------------------------------------------------------------*/
 
 /*
@@ -67,6 +72,7 @@ static float jump_p[3];                 /* Jump destination                  */
  * encapsulated here, and all references to the input by the game are
  * made here.
  */
+
 
 struct input
 {
@@ -98,6 +104,8 @@ static void input_set_x(float x)
     if (x < -ANGLE_BOUND) x = -ANGLE_BOUND;
     if (x >  ANGLE_BOUND) x =  ANGLE_BOUND;
 
+
+    // JK i can change the axis here but the camera does not see it
     input_current.x = x;
 }
 
@@ -551,6 +559,10 @@ static void game_update_view(float dt)
 
     /* Track manual rotation time. */
 
+        
+
+
+
     if (da == 0.0f)
     {
         if (view_time < 0.0f)
@@ -659,6 +671,7 @@ static void game_update_view(float dt)
 static void game_update_time(float dt, int b)
 {
    /* The ticking clock. */
+  
 
     if (b && timer_down)
     {
@@ -734,24 +747,35 @@ static int game_update_state(int bt)
 
     if (bt && goal_e && (zp = sol_goal_test(&vary, p, 0)))
     {
-        audio_play(AUD_GOAL, 1.0f);
-        return GAME_GOAL;
+        // audio_play(AUD_GOAL, 1.0f);
+        // return GAME_GOAL;
+        goalswitch =1;
+
+    }else{
+        goalswitch=0;
     }
 
     /* Test for time-out. */
 
     if (bt && timer_down && timer <= 0.f)
     {
-        audio_play(AUD_TIME, 1.0f);
-        return GAME_TIME;
+        // audio_play(AUD_TIME, 1.0f);
+        // return GAME_TIME;
+        timeoutswitch = 1;
+
+    }else{
+        timeoutswitch = 0;
     }
 
     /* Test for fall-out. */
 
     if (bt && (vary.base->vc == 0 || vary.uv[0].p[1] < vary.base->vv[0].p[1]))
     {
-        audio_play(AUD_FALL, 1.0f);
-        return GAME_FALL;
+        fallswitch=1;
+        // audio_play(AUD_FALL, 1.0f);
+        // return GAME_FALL;
+    }else{
+        fallswitch = 0;
     }
 
     return GAME_NONE;
@@ -764,10 +788,9 @@ static int game_step(const float g[3], float dt, int bt)
         float h[3];
 
         /* Smooth jittery or discontinuous input. */
-
         tilt.rx += (input_get_x() - tilt.rx) * dt / MAX(dt, input_get_s());
         tilt.rz += (input_get_z() - tilt.rz) * dt / MAX(dt, input_get_s());
-
+        //fprintf(stdout, "dt is being set to %f  S is being set to %f\n", dt, input_get_s());
         game_tilt_axes(&tilt, view.e);
 
         game_cmd_tiltaxes();
@@ -839,6 +862,10 @@ static int game_step(const float g[3], float dt, int bt)
 
 static void game_server_iter(float dt)
 {
+
+    ball_AI_Controller();
+    NinetyHZCounter++;
+
     switch (status)
     {
     case GAME_GOAL: game_step(GRAVITY_UP, dt, 0); break;
@@ -918,3 +945,29 @@ void game_set_rot(float r)
 }
 
 /*---------------------------------------------------------------------------*/
+
+int returns_fall_state(){
+    return fallswitch;
+}
+
+
+int returns_goal_state(){
+    return goalswitch;
+}
+
+
+int returns_timeout_state(){
+    return timeoutswitch;
+}
+
+
+
+
+// JK here is a fn to show coins collected
+int returns_coins_collected(void){
+    return coins;   
+}
+
+
+
+

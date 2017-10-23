@@ -1,0 +1,764 @@
+==8224== Memcheck, a memory error detector
+==8224== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==8224== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==8224== Command: ./neverball -l map-misc/elevator.sol
+==8224== 
+--8224-- Valgrind options:
+--8224--    -v
+--8224-- Contents of /proc/version:
+--8224--   Linux version 3.19.0-42-generic (buildd@lgw01-24) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #48~14.04.1-Ubuntu SMP Fri Dec 18 10:24:49 UTC 2015
+--8224-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--8224-- Page sizes: currently 4096, max supported 4096
+--8224-- Valgrind library directory: /usr/lib/valgrind
+--8224-- Reading syms from /home/computron/Desktop/NEVERBALLREWORK/JK_falloutFix/JK_alwaysWorks/neverball
+--8224-- Reading syms from /lib/x86_64-linux-gnu/ld-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/ld-2.19.so ..
+--8224--   .. CRC mismatch (computed 46abf574 wanted 3ca2d3ca)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--8224--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--8224--   .. CRC mismatch (computed 4f1eed43 wanted a323a3ab)
+--8224--    object doesn't have a symbol table
+--8224--    object doesn't have a dynamic symbol table
+--8224-- Scheduler: using generic scheduler lock implementation.
+--8224-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==8224== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-8224-by-computron-on-???
+==8224== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-8224-by-computron-on-???
+==8224== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-8224-by-computron-on-???
+==8224== 
+==8224== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==8224== don't want to do, unless you know exactly what you're doing,
+==8224== or are doing some strange experiment):
+==8224==   /usr/lib/valgrind/../../bin/vgdb --pid=8224 ...command...
+==8224== 
+==8224== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==8224==   /path/to/gdb ./neverball
+==8224== and then give GDB the following command
+==8224==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=8224
+==8224== --pid is optional if only one valgrind process is running
+==8224== 
+--8224-- REDIR: 0x4019c50 (ld-linux-x86-64.so.2:strlen) redirected to 0x380764b1 (???)
+--8224-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--8224--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--8224--   .. CRC mismatch (computed fc68135e wanted 45f5e986)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--8224--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--8224--   .. CRC mismatch (computed ae683f7e wanted 08c06df2)
+--8224--    object doesn't have a symbol table
+==8224== WARNING: new redirection conflicts with existing -- ignoring it
+--8224--     old: 0x04019c50 (strlen              ) R-> (0000.0) 0x380764b1 ???
+--8224--     new: 0x04019c50 (strlen              ) R-> (2007.0) 0x04c2e1a0 strlen
+--8224-- REDIR: 0x4019a00 (ld-linux-x86-64.so.2:index) redirected to 0x4c2dd50 (index)
+--8224-- REDIR: 0x4019c20 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2f2f0 (strcmp)
+--8224-- REDIR: 0x401a970 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31da0 (mempcpy)
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libSDL2_ttf-2.0.so.0.10.2
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/nvidia-367/libGL.so.1.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libjpeg.so.8.0.2
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+--8224--   Considering /lib/x86_64-linux-gnu/libpng12.so.0.50.0 ..
+--8224--   .. CRC mismatch (computed 5ffec5b3 wanted a82362b3)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libphysfs.so.2.0.3
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libm-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/libm-2.19.so ..
+--8224--   .. CRC mismatch (computed 08659659 wanted 7ce1b39a)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libc-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/libc-2.19.so ..
+--8224--   .. CRC mismatch (computed ac9b5ddb wanted a10d05bf)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1 ..
+--8224--   .. CRC mismatch (computed a72e821d wanted 16075ea5)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libdl-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/libdl-2.19.so ..
+--8224--   .. CRC mismatch (computed 5e07a82d wanted c608f377)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libdl-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libpulse-simple.so.0.0.4
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libpulse-simple.so.0.0.4 ..
+--8224--   .. CRC mismatch (computed cf51114b wanted 2f006a7a)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2 ..
+--8224--   .. CRC mismatch (computed 8c5b6861 wanted 04b35ed6)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0 ..
+--8224--   .. CRC mismatch (computed c168660b wanted 161bd255)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0 ..
+--8224--   .. CRC mismatch (computed 52bd6459 wanted a8305e86)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2 ..
+--8224--   .. CRC mismatch (computed 63e27661 wanted 89d60ca9)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0 ..
+--8224--   .. CRC mismatch (computed 7bb99cdf wanted 61ad4d32)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0 ..
+--8224--   .. CRC mismatch (computed 30ad0331 wanted 48347a70)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0 ..
+--8224--   .. CRC mismatch (computed ab522b10 wanted 5fc28128)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libwayland-egl.so.1.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.2.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libwayland-cursor.so.0.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libxkbcommon.so.0.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libpthread-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/libpthread-2.19.so ..
+--8224--   .. CRC mismatch (computed 88040ace wanted 71b58165)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libpthread-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /lib/x86_64-linux-gnu/librt-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/librt-2.19.so ..
+--8224--   .. CRC mismatch (computed 9efd3dd5 wanted ae0f290f)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/librt-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /usr/lib/nvidia-367/libGLX.so.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/nvidia-367/libGLdispatch.so.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libz.so.1.2.8
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so
+--8224--   Considering /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so ..
+--8224--   .. CRC mismatch (computed 95f70ea6 wanted ed782968)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0 ..
+--8224--   .. CRC mismatch (computed 4a8ba753 wanted 8fd14838)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1 ..
+--8224--   .. CRC mismatch (computed ffa3f758 wanted a40db115)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+--8224--   Considering /lib/x86_64-linux-gnu/libwrap.so.0.7.6 ..
+--8224--   .. CRC mismatch (computed 34dcf8ad wanted 45219146)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25 ..
+--8224--   .. CRC mismatch (computed 8e449124 wanted f429ff36)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0 ..
+--8224--   .. CRC mismatch (computed 256f5df8 wanted 5d40ac88)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+--8224--   Considering /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0 ..
+--8224--   .. CRC mismatch (computed 15fc4130 wanted a06cb5c7)
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libnsl-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/libnsl-2.19.so ..
+--8224--   .. CRC mismatch (computed b4651a1b wanted 90b82bd2)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libnsl-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libresolv-2.19.so
+--8224--   Considering /lib/x86_64-linux-gnu/libresolv-2.19.so ..
+--8224--   .. CRC mismatch (computed b2c0b317 wanted 63fc9f84)
+--8224--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libresolv-2.19.so ..
+--8224--   .. CRC is valid
+--8224-- REDIR: 0x620cc50 (libc.so.6:strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620ef40 (libc.so.6:strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620c420 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620be50 (libc.so.6:bcmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x6211620 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x6206f60 (libc.so.6:strcmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620a670 (libc.so.6:strncpy) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x6208dd0 (libc.so.6:strncmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x62083f0 (libc.so.6:strcpy) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620caa0 (libc.so.6:stpcpy) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x6206d10 (libc.so.6:index) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x6206b10 (libc.so.6:strcat) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620b8c0 (libc.so.6:strstr) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x620a6b0 (libc.so.6:rindex) redirected to 0x4c2da30 (rindex)
+--8224-- REDIR: 0x62089b0 (libc.so.6:strlen) redirected to 0x4c2e0e0 (strlen)
+--8224-- REDIR: 0x6203130 (libc.so.6:calloc) redirected to 0x4c2cbf0 (calloc)
+--8224-- REDIR: 0x6202660 (libc.so.6:malloc) redirected to 0x4c2ab10 (malloc)
+--8224-- REDIR: 0x6202e00 (libc.so.6:realloc) redirected to 0x4c2ce10 (realloc)
+--8224-- REDIR: 0x6211670 (libc.so.6:__GI_memcpy) redirected to 0x4c2fc90 (__GI_memcpy)
+--8224-- REDIR: 0x62bfe00 (libc.so.6:__strcmp_ssse3) redirected to 0x4c2f1b0 (strcmp)
+--8224-- REDIR: 0x62cfc90 (libc.so.6:__memmove_ssse3_back) redirected to 0x4c2f450 (memcpy@GLIBC_2.2.5)
+--8224-- REDIR: 0x620c4b0 (libc.so.6:memset) redirected to 0x4c31350 (memset)
+--8224-- REDIR: 0x6206d40 (libc.so.6:__GI_strchr) redirected to 0x4c2db90 (__GI_strchr)
+--8224-- REDIR: 0x6217ec0 (libc.so.6:__memcpy_sse2_unaligned) redirected to 0x4c2f6b0 (memcpy@@GLIBC_2.14)
+--8224-- REDIR: 0x62137a0 (libc.so.6:rawmemchr) redirected to 0x4c319f0 (rawmemchr)
+--8224-- REDIR: 0x621ca80 (libc.so.6:__strcpy_sse2_unaligned) redirected to 0x4c2e1c0 (strcpy)
+--8224-- REDIR: 0x6202d00 (libc.so.6:free) redirected to 0x4c2bd80 (free)
+--8224-- REDIR: 0x621f8a0 (libc.so.6:__strcat_sse2_unaligned) redirected to 0x4c2dd90 (strcat)
+--8224-- REDIR: 0x6208e20 (libc.so.6:__GI_strncmp) redirected to 0x4c2e930 (__GI_strncmp)
+--8224-- REDIR: 0x621d0b0 (libc.so.6:__strncpy_sse2_unaligned) redirected to 0x4c2e770 (__strncpy_sse2_unaligned)
+--8224-- REDIR: 0x6208d90 (libc.so.6:strncat) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x6220190 (libc.so.6:__strncat_sse2_unaligned) redirected to 0x4c2df70 (strncat)
+--8224-- REDIR: 0x620c290 (libc.so.6:__GI_memmove) redirected to 0x4c31660 (__GI_memmove)
+--8224-- REDIR: 0x621e090 (libc.so.6:__stpcpy_sse2_unaligned) redirected to 0x4c30f60 (__stpcpy_sse2_unaligned)
+--8224-- REDIR: 0xffffffffff600400 (???:???) redirected to 0x3807649d (???)
+--8224-- REDIR: 0x620b300 (libc.so.6:__GI_strstr) redirected to 0x4c32030 (__strstr_sse2)
+--8224-- REDIR: 0x620be90 (libc.so.6:__GI_memcmp) redirected to 0x4c30b80 (__GI_memcmp)
+--8224-- REDIR: 0x6208430 (libc.so.6:__GI_strcpy) redirected to 0x4c2e2a0 (__GI_strcpy)
+--8224-- REDIR: 0x6206fa0 (libc.so.6:__GI_strcmp) redirected to 0x4c2f200 (__GI_strcmp)
+--8224-- REDIR: 0x62139b0 (libc.so.6:strchrnul) redirected to 0x4c319b0 (strchrnul)
+--8224-- REDIR: 0x62c1060 (libc.so.6:__strncmp_ssse3) redirected to 0x4c2e8c0 (strncmp)
+--8224-- REDIR: 0x6288c30 (libc.so.6:__strcpy_chk) redirected to 0x4c31a30 (__strcpy_chk)
+--8224-- REDIR: 0x62dfc60 (libc.so.6:__memcmp_sse4_1) redirected to 0x4c30c00 (__memcmp_sse4_1)
+--8224-- REDIR: 0x6221120 (libc.so.6:__strstr_sse2_unaligned) redirected to 0x4c31fa0 (strstr)
+--8224-- REDIR: 0x620bb00 (libc.so.6:memchr) redirected to 0x4c2f390 (memchr)
+--8224-- REDIR: 0x61bbe10 (libc.so.6:unsetenv) redirected to 0x4c325c0 (unsetenv)
+--8224-- REDIR: 0x6217b10 (libc.so.6:__GI_strncpy) redirected to 0x4c2e4d0 (__GI_strncpy)
+--8224-- Reading syms from /usr/lib/nvidia-367/libGLX_nvidia.so.367.57
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/nvidia-367/tls/libnvidia-tls.so.367.57
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /usr/lib/nvidia-367/libnvidia-glcore.so.367.57
+--8224--    object doesn't have a symbol table
+--8224-- REDIR: 0x620c5b0 (libc.so.6:mempcpy) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x62cd1c0 (libc.so.6:__mempcpy_ssse3_back) redirected to 0x4c31ad0 (mempcpy)
+--8224-- REDIR: 0x6204790 (libc.so.6:posix_memalign) redirected to 0x4c2d1f0 (posix_memalign)
+--8224-- REDIR: 0x62bcde0 (libc.so.6:__strcasecmp_avx) redirected to 0x4c2ea80 (strcasecmp)
+--8224-- REDIR: 0x6208b70 (libc.so.6:strnlen) redirected to 0x4c2e080 (strnlen)
+--8224-- REDIR: 0x401aac0 (ld-linux-x86-64.so.2:stpcpy) redirected to 0x4c31120 (stpcpy)
+--8224-- REDIR: 0x6208510 (libc.so.6:strcspn) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x62bca60 (libc.so.6:__strcspn_sse42) redirected to 0x4c321b0 (strcspn)
+==8224== Syscall param sendmsg(msg.msg_iov[0]) points to uninitialised byte(s)
+==8224==    at 0x627B4A0: __sendmsg_nocancel (syscall-template.S:81)
+==8224==    by 0xC3E7036: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xC3E2E88: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xC37B8CD: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xD8615B5: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD859F53: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD85BAF2: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD85C297: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xC3D0469: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xD858645: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD8591B8: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xC37BB75: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==  Address 0xffefff38c is on thread 1's stack
+==8224== 
+--8224-- REDIR: 0xffffffffff600000 (???:???) redirected to 0x38076493 (???)
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.gl9WN8tO (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.gl9WN8tO (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.glfnCT1B (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.glfnCT1B (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- REDIR: 0x620cae0 (libc.so.6:__GI_stpcpy) redirected to 0x4c30da0 (__GI_stpcpy)
+--8224-- REDIR: 0x620ad30 (libc.so.6:strspn) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--8224-- REDIR: 0x62bccc0 (libc.so.6:__strspn_sse42) redirected to 0x4c32220 (strspn)
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libudev.so.1.3.5
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libnih.so.1.0.0
+--8224--    object doesn't have a symbol table
+--8224-- Reading syms from /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+--8224--    object doesn't have a symbol table
+--8224-- REDIR: 0x61bbdb0 (libc.so.6:setenv) redirected to 0x4c32660 (setenv)
+==8224== Source and destination overlap in memcpy(0x679900, 0x679900, 32)
+==8224==    at 0x4C2F71C: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8224==    by 0x5261CB9: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.0)
+==8224==    by 0x52625F1: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.0)
+==8224==    by 0x423ECB: audio_init (audio.c:271)
+==8224==    by 0x441C23: main (main.c:537)
+==8224== 
+--8224-- REDIR: 0x620ccc0 (libc.so.6:__GI___strcasecmp_l) redirected to 0x4c2ee20 (__GI___strcasecmp_l)
+Creating a window (1920x1080, fullscreen)
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.glxC3eOs (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.glxC3eOs (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.glTCQC3j (deleted):
+--8224-- failed to stat64/stat this file
+--8224-- WARNING: Serious error when reading debug info
+--8224-- When reading debug info from /tmp/.glTCQC3j (deleted):
+--8224-- failed to stat64/stat this file
+Created a window (2, 1920x1080, fullscreen)
+Size change event (2, 1920x1080)
+Resize event (2, 1920x1080)
+--8224-- memcheck GC: 1000 nodes, 52 survivors (  5.2%)
+--8224-- memcheck GC: 1000 nodes, 170 survivors ( 17.0%)
+--8224-- memcheck GC: 1014 new table size (driftup)
+--8224-- memcheck GC: 1014 nodes, 131 survivors ( 12.9%)
+--8224-- memcheck GC: 1014 nodes, 154 survivors ( 15.1%)
+--8224-- memcheck GC: 1029 new table size (driftup)
+--8224-- memcheck GC: 1029 nodes, 130 survivors ( 12.6%)
+--8224-- memcheck GC: 1029 nodes, 184 survivors ( 17.8%)
+--8224-- memcheck GC: 1044 new table size (driftup)
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA4CE: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Use of uninitialised value of size 8
+==8224==    at 0x61C999B: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61C99A5: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CD682: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA599: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA61C: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x43AE37: ball_AI_Controller (st_play.c:633)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA4CE: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Use of uninitialised value of size 8
+==8224==    at 0x61C999B: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61C99A5: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CD682: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA599: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA61C: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA4CE: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Use of uninitialised value of size 8
+==8224==    at 0x61C999B: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61C99A5: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CD682: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA599: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA61C: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+--8224-- Discarding syms at 0xf5a4010-0xf5ac750 in /lib/x86_64-linux-gnu/libudev.so.1.3.5 due to munmap()
+--8224-- Discarding syms at 0x104e4610-0x104f66ec in /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0 due to munmap()
+--8224-- Discarding syms at 0x10916ce0-0x1091a4c6 in /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0 due to munmap()
+--8224-- Discarding syms at 0x10700760-0x1070d12a in /lib/x86_64-linux-gnu/libnih.so.1.0.0 due to munmap()
+
+ seed initialized
+Setting state:    11600  bad option:  3    
+no hatestate file. writing, opt: 3
+Setting state:    11650  bad option:  8    
+file already exists
+Adding opt: 8 to HS file for 11650
+writing HS file: 260009456
+writing HS file: 8
+Setting state:    11700  bad option:  6    
+no hatestate file. writing, opt: 6
+Setting state:    11750  bad option:  6    
+file already exists
+Adding opt: 6 to HS file for 11750
+writing HS file: 260009456
+writing HS file: 6
+Setting state:    11800  bad option:  6    
+no hatestate file. writing, opt: 6
+Setting state:    11850  bad option:  6    
+no hatestate file. writing, opt: 6
+==8224== 
+==8224== HEAP SUMMARY:
+==8224==     in use at exit: 2,150,234 bytes in 2,027 blocks
+==8224==   total heap usage: 400,926 allocs, 398,899 frees, 569,954,366 bytes allocated
+==8224== 
+==8224== Searching for pointers to 2,027 not-freed blocks
+==8224== Checked 7,788,392 bytes
+==8224== 
+==8224== LEAK SUMMARY:
+==8224==    definitely lost: 1,334 bytes in 26 blocks
+==8224==    indirectly lost: 176 bytes in 4 blocks
+==8224==      possibly lost: 0 bytes in 0 blocks
+==8224==    still reachable: 2,148,724 bytes in 1,997 blocks
+==8224==         suppressed: 0 bytes in 0 blocks
+==8224== Rerun with --leak-check=full to see details of leaked memory
+==8224== 
+==8224== Use --track-origins=yes to see where uninitialised values come from
+==8224== ERROR SUMMARY: 136 errors from 21 contexts (suppressed: 6 from 2)
+==8224== 
+==8224== 1 errors in context 1 of 21:
+==8224== Source and destination overlap in memcpy(0x679900, 0x679900, 32)
+==8224==    at 0x4C2F71C: memcpy@@GLIBC_2.14 (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8224==    by 0x5261CB9: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.0)
+==8224==    by 0x52625F1: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.0)
+==8224==    by 0x423ECB: audio_init (audio.c:271)
+==8224==    by 0x441C23: main (main.c:537)
+==8224== 
+==8224== 
+==8224== 1 errors in context 2 of 21:
+==8224== Syscall param sendmsg(msg.msg_iov[0]) points to uninitialised byte(s)
+==8224==    at 0x627B4A0: __sendmsg_nocancel (syscall-template.S:81)
+==8224==    by 0xC3E7036: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xC3E2E88: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xC37B8CD: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xD8615B5: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD859F53: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD85BAF2: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD85C297: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xC3D0469: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==    by 0xD858645: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xD8591B8: ??? (in /usr/lib/nvidia-367/libnvidia-glcore.so.367.57)
+==8224==    by 0xC37BB75: ??? (in /usr/lib/nvidia-367/libGLX_nvidia.so.367.57)
+==8224==  Address 0xffefff38c is on thread 1's stack
+==8224== 
+==8224== 
+==8224== 2 errors in context 3 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA61C: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 4 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA599: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 5 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CD682: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 6 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA4CE: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 7 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA61C: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 8 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA599: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 9 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CD682: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 10 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA4CE: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 11 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x43AE37: ball_AI_Controller (st_play.c:633)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 12 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA61C: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 13 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA599: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 14 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CD682: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 2 errors in context 15 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61CA4CE: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 18 errors in context 16 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61C99A5: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 18 errors in context 17 of 21:
+==8224== Use of uninitialised value of size 8
+==8224==    at 0x61C999B: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43B027: ball_AI_Controller (st_play.c:657)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 18 errors in context 18 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61C99A5: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 18 errors in context 19 of 21:
+==8224== Use of uninitialised value of size 8
+==8224==    at 0x61C999B: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AFFF: ball_AI_Controller (st_play.c:656)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 18 errors in context 20 of 21:
+==8224== Conditional jump or move depends on uninitialised value(s)
+==8224==    at 0x61C99A5: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+==8224== 
+==8224== 18 errors in context 21 of 21:
+==8224== Use of uninitialised value of size 8
+==8224==    at 0x61C999B: _itoa_word (_itoa.c:179)
+==8224==    by 0x61CD636: vfprintf (vfprintf.c:1660)
+==8224==    by 0x61D4336: fprintf (fprintf.c:32)
+==8224==    by 0x43AD9C: ball_AI_Controller (st_play.c:618)
+==8224==    by 0x43CC32: play_loop_paint (st_play.c:1118)
+==8224==    by 0x4231B2: st_paint (state.c:167)
+==8224==    by 0x441DB2: main (main.c:609)
+==8224== 
+--8224-- 
+--8224-- used_suppression:      6 X on SUSE11 writev uninit padding /usr/lib/valgrind/default.supp:397
+==8224== 
+==8224== ERROR SUMMARY: 136 errors from 21 contexts (suppressed: 6 from 2)

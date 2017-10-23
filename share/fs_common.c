@@ -255,8 +255,9 @@ void *fs_load(const char *path, int *datalen)
 
     data = NULL;
 
-    if ((*datalen = fs_size(path)) > 0)
-        if ((fh = fs_open_read(path)))
+    if ((fh = fs_open(path, "r")))
+    {
+        if ((*datalen = fs_length(fh)) > 0)
         {
             if ((data = malloc(*datalen)))
             {
@@ -267,9 +268,10 @@ void *fs_load(const char *path, int *datalen)
                     *datalen = 0;
                 }
             }
-
-            fs_close(fh);
         }
+
+        fs_close(fh);
+    }
 
     return data;
 }

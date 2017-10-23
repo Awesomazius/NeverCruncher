@@ -46,7 +46,7 @@
 
 #define CLAMP(a, b, c) MIN(MAX(a, b), c)
 
-#define SIGN(n) ((n) < 0 ? -1 : ((n) > 0 ? +1 : 0))
+#define SIGN(n) ((n) < 0 ? -1 : ((n) ? +1 : 0))
 #define ROUND(f) ((int) ((f) + 0.5f * SIGN(f)))
 
 #define TIME_TO_MS(t) ROUND((t) * 1000.0f)
@@ -99,7 +99,6 @@ const char *date_to_str(time_t);
 
 int  file_exists(const char *);
 int  file_rename(const char *, const char *);
-int  file_size(const char *);
 void file_copy(FILE *fin, FILE *fout);
 
 /* Paths. */

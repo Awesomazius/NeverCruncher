@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2003-2010 Neverball authors
+ * Copyright (C) 2003-2010 Neverball authorss
  *
  * NEVERBALL is  free software; you can redistribute  it and/or modify
  * it under the  terms of the GNU General  Public License as published
@@ -22,6 +22,13 @@
 #include "vec3.h"
 #include "geom.h"
 
+
+//jk globalising so I can export
+float AccelerationForExport[3];
+float PositionForExport[3];
+float VelocityForExport[3];
+
+
 /*---------------------------------------------------------------------------*/
 
 static float erp(float t)
@@ -42,6 +49,8 @@ void sol_body_p(float p[3],
                 float dt)
 {
     float v[3];
+
+
 
     if (bp->mi >= 0)
     {
@@ -238,6 +247,17 @@ void sol_pendulum(struct v_ball *up,
     v_crs(Y, v, up->E[2]);
     v_scl(Y, up->E[1], 2 * v_dot(Y, up->E[1]));
 
+    //fprintf(stdout, "A zero is %f, A one is %f, A two is %f\n", A[0], A[1], A[2]);
+    AccelerationForExport[0] = A[0];
+    AccelerationForExport[1] = A[1];
+    AccelerationForExport[2] = A[2];
+
+    VelocityForExport[0] = v[0];
+    VelocityForExport[1] = v[1];
+    VelocityForExport[2] = v[2];
+
+
+            
     sol_rotate(up->E, Y, dt);
 }
 
@@ -424,6 +444,7 @@ int sol_item_test(struct s_vary *vary, float *p, float item_r)
     return -1;
 }
 
+//JK here the goal test is run *** usefull *** 
 struct b_goal *sol_goal_test(struct s_vary *vary, float *p, int ui)
 {
     const float *ball_p = vary->uv[ui].p;
@@ -461,6 +482,10 @@ int sol_jump_test(struct s_vary *vary, float *p, int ui)
     const float *ball_p = vary->uv[ui].p;
     const float  ball_r = vary->uv[ui].r;
     int ji, touch = 0;
+
+    //fprintf(stdout, "P Z is %f, P Y is %f, P X is %f\n", ball_p[0], ball_p[1], ball_p[2]);
+    PositionForExport[0] = ball_p[0];
+    PositionForExport[2] = ball_p[2];
 
     for (ji = 0; ji < vary->base->jc; ji++)
     {
@@ -601,3 +626,39 @@ int sol_swch_test(struct s_vary *vary, cmd_fn cmd_func, int ui)
 }
 
 /*---------------------------------------------------------------------------*/
+// JK getting acceleration and pos and goalstate
+
+float returns_ball_X_accleration(){
+    return AccelerationForExport[2];
+}
+
+
+float returns_ball_Y_accleration(){
+    return AccelerationForExport[1];
+}
+
+
+
+float returns_ball_Z_accleration(){
+    return AccelerationForExport[0];
+}
+
+float returns_ball_X_position(){
+    return PositionForExport[2];
+}
+
+float returns_ball_Z_position(){
+    return PositionForExport[0];
+}
+
+float returns_ball_X_velocity(){
+        return VelocityForExport[0];
+    }
+
+float returns_ball_Y_velocity(){
+        return VelocityForExport[1];
+    }
+
+float returns_ball_Z_velocity(){
+        return VelocityForExport[2];
+    }

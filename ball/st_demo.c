@@ -657,13 +657,8 @@ static int demo_end_keybd(int c, int d)
 {
     if (d)
     {
-        if (c == KEY_EXIT)
-        {
-            if (demo_paused)
-                return demo_end_action(DEMO_CONTINUE, 0);
-            else
-                return demo_end_action(standalone ? DEMO_QUIT : DEMO_KEEP, 0);
-        }
+        if (demo_paused && c == KEY_EXIT)
+            return demo_end_action(DEMO_CONTINUE, 0);
     }
     return 1;
 }

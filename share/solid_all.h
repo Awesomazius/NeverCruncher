@@ -49,4 +49,16 @@ struct b_goal *sol_goal_test(struct s_vary *, float *p, int ui);
 int            sol_jump_test(struct s_vary *, float *p, int ui);
 int            sol_swch_test(struct s_vary *, cmd_fn, int ui);
 
+extern float returns_ball_X_accleration(void);
+extern float returns_ball_Y_accleration(void);
+extern float returns_ball_Z_accleration(void);
+
+extern float returns_ball_X_position(void);
+extern float returns_ball_Z_position(void);
+
+extern float returns_ball_X_velocity(void);
+extern float returns_ball_Y_velocity(void);
+extern float returns_ball_Z_velocity(void);
+
+
 #endif

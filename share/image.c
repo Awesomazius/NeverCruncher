@@ -45,7 +45,7 @@ void image_snap(const char *filename)
 
     /* Initialize all PNG export data structures. */
 
-    if (!(filep = fs_open_write(filename)))
+    if (!(filep = fs_open(filename, "w")))
         return;
     if (!(writep = png_create_write_struct(PNG_LIBPNG_VER_STRING, 0, 0, 0)))
         return;
@@ -151,7 +151,7 @@ GLuint make_texture(const void *p, int w, int h, int b, int fl)
     }
 #endif
 #ifdef GL_TEXTURE_MAX_ANISOTROPY_EXT
-    if (a && gli.texture_filter_anisotropic) glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, a);
+    if (a) glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, a);
 #endif
 
     /* Copy the image to an OpenGL texture. */

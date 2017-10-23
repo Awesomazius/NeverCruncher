@@ -52,6 +52,7 @@ static int resume;
 
 static int goal_action(int tok, int val)
 {
+    return goto_state(&st_level);
     audio_play(AUD_MENU, 1.0f);
 
     switch (tok)

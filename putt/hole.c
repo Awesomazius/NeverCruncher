@@ -62,7 +62,7 @@ static void hole_init_rc(const char *filename)
 
     /* Load the holes list. */
 
-    if ((fin = fs_open_read(filename)))
+    if ((fin = fs_open(filename, "r")))
     {
         /* Skip shot and description. */
 

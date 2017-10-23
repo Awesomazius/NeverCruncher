@@ -21,6 +21,10 @@
 #include "util.h"
 #include "config.h"
 
+//jk for fprintf
+#include <stdio.h>
+#include <stdlib.h>
+
 /*---------------------------------------------------------------------------*/
 
 static int is_special_name(const char *n)
@@ -148,6 +152,7 @@ static void gui_set_scores(const char *label, const struct score *s, int hilite)
     }
 }
 
+
 /*---------------------------------------------------------------------------*/
 
 static int score_type = GUI_SCORE_COIN;
@@ -264,7 +269,7 @@ static int keyd[127];
 void gui_keyboard(int id)
 {
     int jd, kd, ld;
-
+    
     lock = 1;
 
     if ((jd = gui_hstack(id)))

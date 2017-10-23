@@ -20,6 +20,10 @@
 
 /*---------------------------------------------------------------------------*/
 
+
+// JK bool setup
+typedef enum { false, true } bool;
+
 #define GUI_FACE "ttf/DejaVuSans-Bold.ttf"
 
 #define GUI_SML  0
@@ -158,5 +162,12 @@ struct size
 struct size gui_measure(const char *text, int size);
 
 /*---------------------------------------------------------------------------*/
+
+
+int timetaken;
+extern int returns_total_time(void);
+int totaltime;
+
+
 
 #endif

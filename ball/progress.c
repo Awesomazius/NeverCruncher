@@ -63,7 +63,8 @@ static int timer = 0;
 static int goal   = 0; /* Current goal value. */
 static int goal_i = 0; /* Initial goal value. */
 
-static int goal_e = 0; /* Goal enabled flag   */
+static int goal_e      = 0; /* Goal enabled flag                */
+static int same_goal_e = 0; /* Reuse existing goal enabled flag */
 
 static int time_rank = RANK_LAST;
 static int goal_rank = RANK_LAST;
@@ -124,8 +125,11 @@ int  progress_play(struct level *l)
         timer  = 0;
         goal   = goal_i = level_goal(level);
 
-        goal_e = (mode != MODE_CHALLENGE && level_completed(level) &&
-                  config_get_d(CONFIG_LOCK_GOALS) == 0) || goal == 0;
+        if (same_goal_e)
+            same_goal_e = 0;
+        else
+            goal_e = (mode != MODE_CHALLENGE && level_completed(level) &&
+                      config_get_d(CONFIG_LOCK_GOALS) == 0) || goal == 0;
 
         prev = curr;
 
@@ -157,13 +161,15 @@ void progress_step(void)
 void progress_stat(int s)
 {
     int i, dirty = 0;
-
+    
     status = s;
 
     coins = curr_coins();
     timer = (level_time(level) == 0 ?
              curr_clock() :
              level_time(level) - curr_clock());
+             
+             
 
     switch (status)
     {
@@ -320,6 +326,8 @@ int  progress_same(void)
     if (status == GAME_GOAL)
         curr = prev;
 
+    same_goal_e = 1;
+
     return progress_play(level);
 }
 
@@ -416,3 +424,12 @@ const char *mode_to_str(int m, int l)
 }
 
 /*---------------------------------------------------------------------------*/
+
+int returns_coins_collectible(){
+    return goal_i;
+}
+
+
+
+
+

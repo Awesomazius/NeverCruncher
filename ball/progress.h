@@ -31,7 +31,10 @@ int  progress_set_high(void);
 
 struct level *curr_level(void);
 
-int  curr_balls(void);
+
+
+extern int returns_coins_collectible(void);
+
 int  curr_score(void);
 int  curr_mode (void);
 int  curr_goal (void);
@@ -61,5 +64,7 @@ enum
 const char *mode_to_str(int, int);
 
 /*---------------------------------------------------------------------------*/
+
+
 
 #endif

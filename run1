@@ -1,0 +1,578 @@
+ball/st_play.c:504: T=11975: T_actual=12000.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=12000.0: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11986.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11986.7: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11984.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11984.4: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11982.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11982.2: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11981.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11981.1: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11978.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11978.9: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11977.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11977.8: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11975: T_actual=11976.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11975.txt: tilt=-30.000000 0.000000 runID=2017-06-19:140953
+ball/st_play.c:715: T=11975: T_actual=11976.7: First iteration tilt: -30.000000 0.000000 (TOTALTIME=12000 T=11975 interim=25)
+ball/st_play.c:504: T=11950: T_actual=11974.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11974.5: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11972.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11972.2: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11971.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11971.1: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11968.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11968.9: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11967.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11967.8: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11965.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11965.6: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11964.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11964.5: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11962.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11962.2: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11961.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11961.1: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11958.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11958.9: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11957.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11957.8: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11955.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11955.6: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11954.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11954.5: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11952.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11952.2: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11950: T_actual=11951.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11950.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140956
+ball/st_play.c:761: T=11950: T_actual=11951.1: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11948.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11948.9: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11947.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11947.8: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11946.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11946.7: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11945.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11945.6: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11944.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11944.5: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11942.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11942.2: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11941.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11941.1: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11940.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11940.0: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11938.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11938.9: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11936.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11936.7: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11935.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11935.6: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11934.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11934.5: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11932.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11932.2: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11932.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11932.2: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11930.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11930.0: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11928.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11928.9: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11927.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11927.8: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11925: T_actual=11926.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11925.txt: tilt=-30.000000 -30.000000 runID=2017-06-19:140958
+ball/st_play.c:761: T=11925: T_actual=11926.7: Chosen tilt: -30.000000 -30.000000
+ball/st_play.c:504: T=11900: T_actual=11924.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11924.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11923.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11923.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11922.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11922.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11921.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11921.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11920.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11920.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11918.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11918.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11916.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11916.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11915.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11915.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11914.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11914.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11912.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11912.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11911.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11911.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11910.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11910.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11908.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11908.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11906.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11906.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11905.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11905.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11904.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11904.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11903.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11903.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11902.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11902.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11900: T_actual=11900.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11900.txt: tilt=30.000000 30.000000 runID=2017-06-19:141000
+ball/st_play.c:761: T=11900: T_actual=11900.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11898.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11898.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11897.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11897.8: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11896.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11896.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11895.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11895.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11893.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11893.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11892.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11892.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11891.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11891.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11890.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11890.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11888.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11888.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11886.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11886.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11885.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11885.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11884.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11884.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11883.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11883.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11882.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11882.3: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11880.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11880.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11878.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11878.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11878.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11878.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11876.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11876.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11875: T_actual=11875.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11875.txt: tilt=30.000000 30.000000 runID=2017-06-19:141005
+ball/st_play.c:761: T=11875: T_actual=11875.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11850: T_actual=11874.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11874.5: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11873.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11873.4: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11872.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11872.3: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11871.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11871.1: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11870.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11870.0: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11868.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11868.9: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11866.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11866.7: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11865.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11865.6: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11864.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11864.5: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11863.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11863.4: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11861.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11861.1: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11860.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11860.0: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11858.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11858.9: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11857.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11857.8: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11856.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11856.7: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11854.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11854.5: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11853.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11853.4: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11852.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11852.3: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11851.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11851.1: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11850: T_actual=11850.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11850.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141013
+ball/st_play.c:761: T=11850: T_actual=11850.0: Chosen tilt: -30.000000 0.000000
+ball/st_play.c:504: T=11825: T_actual=11848.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11848.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11847.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11847.8: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11846.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11846.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11845.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11845.6: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11844.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11844.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11843.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11843.4: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11841.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11841.2: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11840.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11840.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11838.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11838.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11837.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11837.8: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11836.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11836.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11835.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11835.6: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11834.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11834.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11832.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11832.3: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11831.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11831.2: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11830.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11830.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11828.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11828.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11827.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11827.8: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11825: T_actual=11826.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11825.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141023
+ball/st_play.c:761: T=11825: T_actual=11826.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11824.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11824.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11824.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11824.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11822.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11822.3: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11821.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11821.2: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11820.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11820.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11818.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11818.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11817.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11817.8: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11815.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11815.6: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11814.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11814.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11813.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11813.4: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11812.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11812.3: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11811.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11811.2: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11810.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11810.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11808.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11808.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11806.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11806.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11805.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11805.6: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11804.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11804.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11803.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11803.4: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11802.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11802.3: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11800: T_actual=11801.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11800.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141025
+ball/st_play.c:761: T=11800: T_actual=11801.2: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11775: T_actual=11798.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11798.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11797.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11797.8: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11796.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11796.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11795.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11795.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11794.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11794.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11793.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11793.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11792.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11792.3: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11791.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11791.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11788.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11788.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11787.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11787.8: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11786.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11786.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11785.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11785.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11784.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11784.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11783.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11783.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11782.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11782.3: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11780.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11780.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11778.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11778.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11778.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11778.9: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11776.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11776.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11775: T_actual=11775.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11775.txt: tilt=30.000000 30.000000 runID=2017-06-19:141035
+ball/st_play.c:761: T=11775: T_actual=11775.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11774.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11774.5: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11773.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11773.4: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11772.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11772.3: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11771.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11771.2: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11770.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11770.1: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11768.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11768.9: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11767.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11767.8: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11766.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11766.7: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11765.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11765.6: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11763.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11763.4: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11762.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11762.3: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11761.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11761.2: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11760.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11760.1: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11758.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11758.9: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11757.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11757.8: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11756.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11756.7: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11755.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11755.6: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11754.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11754.5: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11752.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11752.3: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11751.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11751.2: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11750: T_actual=11750.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11750.txt: tilt=0.000000 30.000000 runID=2017-06-19:141126
+ball/st_play.c:761: T=11750: T_actual=11750.1: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11725: T_actual=11749.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11749.0: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11747.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11747.8: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11746.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11746.7: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11745.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11745.6: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11744.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11744.5: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11743.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11743.4: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11741.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11741.2: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11740.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11740.1: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11739.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11739.0: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11737.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11737.8: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11736.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11736.7: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11735.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11735.6: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11734.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11734.5: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11733.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11733.4: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11732.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11732.3: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11731.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11731.2: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11730.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11730.1: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11727.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11727.8: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11726.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11726.7: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11725: T_actual=11726.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11725.txt: tilt=30.000000 0.000000 runID=2017-06-19:141144
+ball/st_play.c:761: T=11725: T_actual=11726.7: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11724.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11724.5: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11723.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11723.4: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11722.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11722.3: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11721.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11721.2: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11720.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11720.1: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11719.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11719.0: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11717.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11717.8: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11716.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11716.7: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11714.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11714.5: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11714.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11714.5: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11713.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11713.4: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11711.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11711.2: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11710.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11710.1: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11709.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11709.0: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11707.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11707.8: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11706.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11706.7: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11705.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11705.6: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11704.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11704.5: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11703.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11703.4: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11702.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11702.3: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11700.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11700.1: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11700: T_actual=11700.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11700.txt: tilt=30.000000 0.000000 runID=2017-06-19:141146
+ball/st_play.c:761: T=11700: T_actual=11700.1: Chosen tilt: 30.000000 0.000000
+ball/st_play.c:504: T=11675: T_actual=11699.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11699.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11697.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11697.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11696.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11696.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11694.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11694.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11693.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11693.4: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11689.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11689.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11686.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11686.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11685.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11685.6: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11684.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11684.5: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11683.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11683.4: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11682.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11682.3: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11681.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11681.2: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11679.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11679.0: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11677.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11677.9: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11676.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11676.7: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11675: T_actual=11675.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11675.txt: tilt=30.000000 -30.000000 runID=2017-06-19:141211
+ball/st_play.c:761: T=11675: T_actual=11675.6: Chosen tilt: 30.000000 -30.000000
+ball/st_play.c:504: T=11650: T_actual=11674.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11674.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11674.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11674.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11672.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11672.3: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11671.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11671.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11670.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11670.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11669.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11669.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11666.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11666.7: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11665.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11665.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11664.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11664.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11663.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11663.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11662.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11662.3: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11661.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11661.2: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11660.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11660.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11659.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11659.0: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11656.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11656.8: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11655.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11655.6: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11654.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11654.5: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11653.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11653.4: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11652.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11652.3: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11650: T_actual=11650.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11650.txt: tilt=30.000000 30.000000 runID=2017-06-19:141254
+ball/st_play.c:761: T=11650: T_actual=11650.1: Chosen tilt: 30.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11649.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11649.0: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11649.0: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11649.0: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11646.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11646.8: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11645.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11645.6: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11644.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11644.5: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11643.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11643.4: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11642.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11642.3: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11640.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11640.1: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11640.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11640.1: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11637.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11637.9: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11636.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11636.8: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11635.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11635.6: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11634.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11634.5: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11633.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11633.4: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11632.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11632.3: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11631.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11631.2: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11630.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11630.1: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11627.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11627.9: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11626.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11626.8: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11625: T_actual=11625.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11625.txt: tilt=0.000000 30.000000 runID=2017-06-19:141327
+ball/st_play.c:761: T=11625: T_actual=11625.6: Chosen tilt: 0.000000 30.000000
+ball/st_play.c:504: T=11600: T_actual=11624.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:781: T=11600: T_actual=11624.5: State being explored=11600, options_tried=7
+ball/st_play.c:856: T=11600: T_actual=11624.5: Exploration tilt: 30.000000 -30.000000 - o_t=7
+ball/st_play.c:504: T=11600: T_actual=11623.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11622.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11621.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11620.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11617.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11616.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11615.6: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11614.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11613.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11612.3: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11611.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11610.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11607.9: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11606.8: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11605.7: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11604.5: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11603.4: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11601.2: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:504: T=11600: T_actual=11600.1: Read from AI_DATA/map-miscelevatorsol/individual_runfiles/11600.txt: tilt=-30.000000 0.000000 runID=2017-06-19:141349
+ball/st_play.c:879: T=11575: T_actual=11599.0: Tilt when figuring out reward: 30.000000 -30.000000
+ball/st_play.c:953: T=11575: T_actual=11599.0: Reward is 0.454376

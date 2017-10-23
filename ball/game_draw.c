@@ -336,9 +336,14 @@ static void game_draw_fore(struct s_rend *rend,
         {
             /* Draw the billboards, entity beams, and coin particles. */
 
-            sol_bill(draw, rend, M, t);
-            game_draw_beams(rend, gd);
-            part_draw_coin(rend);
+            glDisable(GL_LIGHTING);
+            {
+                sol_bill(draw, rend, M, t);
+
+                game_draw_beams(rend, gd);
+                part_draw_coin(rend);
+            }
+            glEnable(GL_LIGHTING);
 
             /* Draw the entity particles using only the sparkle light. */
 

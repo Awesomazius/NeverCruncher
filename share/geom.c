@@ -531,6 +531,7 @@ void back_draw(struct s_rend *rend)
 {
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
+    glDisable(GL_LIGHTING);
     glDepthMask(GL_FALSE);
 
     glPushMatrix();
@@ -541,6 +542,7 @@ void back_draw(struct s_rend *rend)
     glPopMatrix();
 
     glDepthMask(GL_TRUE);
+    glEnable(GL_LIGHTING);
     glEnable(GL_CULL_FACE);
     glEnable(GL_DEPTH_TEST);
 }
@@ -728,7 +730,7 @@ void light_load(void)
 
     light_reset();
 
-    if ((fp = fs_open_read("lights.txt")))
+    if ((fp = fs_open("lights.txt", "r")))
     {
         while (fs_gets(buf, sizeof (buf), fp))
         {

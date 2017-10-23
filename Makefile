@@ -1,3 +1,5 @@
+# Added by Adam to enable debugging:
+DEBUG := 1
 
 #------------------------------------------------------------------------------
 
@@ -15,10 +17,6 @@ $(info Will make a "$(BUILD)" build of Neverball $(VERSION).)
 
 ifeq ($(shell uname), Darwin)
 	PLATFORM := darwin
-endif
-
-ifeq ($(shell uname -o),Msys)
-	PLATFORM := mingw
 endif
 
 #------------------------------------------------------------------------------
@@ -78,10 +76,6 @@ ALL_CPPFLAGS += \
 	-DCONFIG_DATA=\"$(DATADIR)\" \
 	-DCONFIG_LOCALE=\"$(LOCALEDIR)\"
 
-ifeq ($(ENABLE_OPENGLES),1)
-	ALL_CPPFLAGS += -DENABLE_OPENGLES=1
-endif
-
 ifeq ($(ENABLE_NLS),0)
 	ALL_CPPFLAGS += -DENABLE_NLS=0
 else
@@ -135,11 +129,9 @@ ALL_CPPFLAGS += $(HMD_CPPFLAGS)
 SDL_LIBS := $(shell sdl2-config --libs)
 PNG_LIBS := $(shell libpng-config --libs)
 
-ENABLE_FS := stdio
 ifeq ($(ENABLE_FS),stdio)
 FS_LIBS :=
-endif
-ifeq ($(ENABLE_FS),physfs)
+else
 FS_LIBS := -lphysfs
 endif
 
@@ -155,18 +147,10 @@ ifeq ($(ENABLE_TILT),wii)
 else
 ifeq ($(ENABLE_TILT),loop)
 	TILT_LIBS := -lusb-1.0 -lfreespace
-else
-ifeq ($(ENABLE_TILT),leapmotion)
-	TILT_LIBS := /usr/lib/Leap/libLeap.so -Wl,-rpath,/usr/lib/Leap
-endif
 endif
 endif
 
-ifeq ($(ENABLE_OPENGLES),1)
-	OGL_LIBS := -lGLESv1_CM
-else
-	OGL_LIBS := -lGL
-endif
+OGL_LIBS := -lGL
 
 ifeq ($(PLATFORM),mingw)
 	ifneq ($(ENABLE_NLS),0)
@@ -208,12 +192,12 @@ endif
 #------------------------------------------------------------------------------
 
 ifeq ($(PLATFORM),mingw)
-X := .exe
+	EXT := .exe
 endif
 
-MAPC_TARG := mapc$(X)
-BALL_TARG := neverball$(X)
-PUTT_TARG := neverputt$(X)
+MAPC_TARG := mapc$(EXT)
+BALL_TARG := neverball$(EXT)
+PUTT_TARG := neverputt$(EXT)
 
 ifeq ($(PLATFORM),mingw)
 	MAPC := $(WINE) ./$(MAPC_TARG)
@@ -273,6 +257,7 @@ BALL_OBJS := \
 	share/fs_common.o   \
 	share/fs_png.o      \
 	share/fs_jpg.o      \
+	share/fs_rwops.o    \
 	share/fs_ov.o       \
 	share/log.o         \
 	ball/hud.o          \
@@ -336,6 +321,7 @@ PUTT_OBJS := \
 	share/fs_common.o   \
 	share/fs_png.o      \
 	share/fs_jpg.o      \
+	share/fs_rwops.o    \
 	share/fs_ov.o       \
 	share/dir.o         \
 	share/fbo.o         \
@@ -357,8 +343,7 @@ ifeq ($(ENABLE_FS),stdio)
 BALL_OBJS += share/fs_stdio.o
 PUTT_OBJS += share/fs_stdio.o
 MAPC_OBJS += share/fs_stdio.o
-endif
-ifeq ($(ENABLE_FS),physfs)
+else
 BALL_OBJS += share/fs_physfs.o
 PUTT_OBJS += share/fs_physfs.o
 MAPC_OBJS += share/fs_physfs.o
@@ -370,11 +355,7 @@ else
 ifeq ($(ENABLE_TILT),loop)
 BALL_OBJS += share/tilt_loop.o
 else
-ifeq ($(ENABLE_TILT),leapmotion)
-BALL_OBJS += share/tilt_leapmotion.o
-else
 BALL_OBJS += share/tilt_null.o
-endif
 endif
 endif
 
@@ -435,11 +416,7 @@ all : $(BALL_TARG) $(PUTT_TARG) $(MAPC_TARG) sols locales desktops
 ifeq ($(ENABLE_HMD),libovr)
 LINK := $(CXX) $(ALL_CXXFLAGS)
 else
-ifeq ($(ENABLE_TILT),leapmotion)
-LINK := $(CXX) $(ALL_CXXFLAGS)
-else
 LINK := $(CC) $(ALL_CFLAGS)
-endif
 endif
 
 $(BALL_TARG) : $(BALL_OBJS)
@@ -475,10 +452,87 @@ clean : clean-src
 	$(RM) $(DESKTOPS)
 	$(MAKE) -C po clean
 
+test : all
+	./neverball
+
+TAGS :
+	$(RM) $@
+	find . -name '*.[ch]' | xargs etags -a
+
 #------------------------------------------------------------------------------
 
-.PHONY : all sols locales desktops clean-src clean
+.PHONY : all sols locales clean-src clean test TAGS
 
 -include $(BALL_DEPS) $(PUTT_DEPS) $(MAPC_DEPS)
+
+#------------------------------------------------------------------------------
+
+ifeq ($(PLATFORM),mingw)
+
+#------------------------------------------------------------------------------
+
+INSTALLER := ../neverball-$(VERSION)-setup.exe
+
+MAKENSIS := makensis
+MAKENSIS_FLAGS := -DVERSION=$(VERSION) -DOUTFILE=$(INSTALLER)
+
+TODOS   := todos
+FROMDOS := fromdos
+
+CP := cp
+
+TEXT_DOCS := \
+	doc/AUTHORS \
+	doc/MANUAL  \
+	CHANGES     \
+	COPYING     \
+	README
+
+TXT_DOCS := $(TEXT_DOCS:%=%.txt)
+
+#------------------------------------------------------------------------------
+
+.PHONY: setup
+setup: $(INSTALLER)
+
+$(INSTALLER): install-dlls convert-text-files all contrib
+	$(MAKENSIS) $(MAKENSIS_FLAGS) -nocd scripts/neverball.nsi
+
+$(INSTALLER): LDFLAGS := -s $(LDFLAGS)
+
+.PHONY: clean-setup
+clean-setup: clean
+	$(RM) install-dlls.sh *.dll $(TXT_DOCS)
+	find data -name "*.txt" -exec $(FROMDOS) {} \;
+	$(MAKE) -C contrib EXT=$(EXT) clean
+
+#------------------------------------------------------------------------------
+
+.PHONY: install-dlls
+install-dlls: install-dlls.sh
+	sh $<
+
+install-dlls.sh: $(MAPC_TARG) $(BALL_TARG) $(PUTT_TARG)
+	mingw-list-dlls --format=shell $^ > $@
+
+#------------------------------------------------------------------------------
+
+.PHONY: convert-text-files
+convert-text-files: $(TXT_DOCS)
+	find data -name "*.txt" -exec $(TODOS) {} \;
+
+%.txt: %
+	$(CP) $< $@
+	$(TODOS) $@
+
+#------------------------------------------------------------------------------
+
+.PHONY: contrib
+contrib:
+	$(MAKE) -C contrib EXT=$(EXT)
+
+#------------------------------------------------------------------------------
+
+endif
 
 #------------------------------------------------------------------------------

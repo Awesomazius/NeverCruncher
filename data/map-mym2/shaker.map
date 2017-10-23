@@ -1,8 +1,9 @@
+
 // entity 0
 {
 "classname" "worldspawn"
 "author" "Mehdi Yousfi-Monod"
-"version" "1.1"
+"version" "1"
 "back" "map-back/alien.sol"
 "grad" "back/alien.png"
 "song" "bgm/track5.ogg"
@@ -679,7 +680,6 @@
 "classname" "info_camp"
 "origin" "448 -384 0"
 "target" "t6"
-"timer" "600"
 }
 // entity 30
 {
@@ -868,7 +868,6 @@
 "classname" "info_camp"
 "origin" "-384 -384 0"
 "target" "t1"
-"timer" "600"
 }
 // entity 52
 {
@@ -1093,7 +1092,6 @@
 "classname" "info_camp"
 "origin" "-384 448 0"
 "target" "t9"
-"timer" "600"
 }
 // entity 80
 {

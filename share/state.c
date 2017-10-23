@@ -138,6 +138,8 @@ int goto_state(struct state *st)
     if (state && state->enter)
         state->gui_id = state->enter(state, prev);
 
+        
+
     return 1;
 }
 

@@ -955,7 +955,6 @@ static void stroke_leave(struct state *st, struct state *next, int id)
     video_clr_grab();
     config_set_d(CONFIG_CAMERA, 0);
     stroke_rotate = 0.0f;
-    stroke_mag = 0.0f;
 }
 
 static void stroke_paint(int id, float t)
@@ -1332,7 +1331,7 @@ static int score_buttn(int b, int d)
             if (hole_move())
                 goto_state(&st_next);
             else
-                goto_state(&st_title);
+                goto_state(&st_score);
         }
         if (config_tst_d(CONFIG_JOYSTICK_BUTTON_B, b))
             return goto_pause(&st_over);

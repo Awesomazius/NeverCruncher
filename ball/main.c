@@ -14,10 +14,11 @@
 
 /*---------------------------------------------------------------------------*/
 
+
 #include <SDL.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <x86intrin.h>
 #include "version.h"
 #include "glext.h"
 #include "config.h"
@@ -36,11 +37,17 @@
 #include "mtrl.h"
 #include "geom.h"
 
+#include "st_play.h"
 #include "st_conf.h"
 #include "st_title.h"
 #include "st_demo.h"
 #include "st_level.h"
 #include "st_pause.h"
+#include <time.h>
+
+
+
+
 
 const char TITLE[] = "Neverball " VERSION;
 const char ICON[] = "icon/neverball.png";
@@ -52,6 +59,7 @@ static void shot(void)
     static char filename[MAXSTR];
     sprintf(filename, "Screenshots/screen%05d.png", config_screenshot());
     video_snap(filename);
+    
 }
 
 /*---------------------------------------------------------------------------*/
@@ -80,7 +88,6 @@ static int handle_key_dn(SDL_Event *e)
 {
     int d = 1;
     int c = e->key.keysym.sym;
-    int r = e->key.repeat;
 
     /* SDL made me do it. */
 #ifdef __APPLE__
@@ -112,7 +119,6 @@ static int handle_key_dn(SDL_Event *e)
         }
         break;
     case SDLK_RETURN:
-    case SDLK_KP_ENTER:
         d = st_buttn(config_get_d(CONFIG_JOYSTICK_BUTTON_A), 1);
         break;
     case KEY_EXIT:
@@ -121,21 +127,13 @@ static int handle_key_dn(SDL_Event *e)
 
     default:
         if (config_tst_d(CONFIG_KEY_FORWARD, c))
-        {
-            if (!r) st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_Y0), -1.0f);
-        }
+            st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_Y0), -1.0f);
         else if (config_tst_d(CONFIG_KEY_BACKWARD, c))
-        {
-            if (!r) st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_Y0), +1.0f);
-        }
+            st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_Y0), +1.0f);
         else if (config_tst_d(CONFIG_KEY_LEFT, c))
-        {
-            if (!r) st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_X0), -1.0f);
-        }
+            st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_X0), -1.0f);
         else if (config_tst_d(CONFIG_KEY_RIGHT, c))
-        {
-            if (!r) st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_X0), +1.0f);
-        }
+            st_stick(config_get_d(CONFIG_JOYSTICK_AXIS_X0), +1.0f);
         else
             d = st_keybd(e->key.keysym.sym, 1);
     }
@@ -151,7 +149,6 @@ static int handle_key_up(SDL_Event *e)
     switch (c)
     {
     case SDLK_RETURN:
-    case SDLK_KP_ENTER:
         d = st_buttn(config_get_d(CONFIG_JOYSTICK_BUTTON_A), 0);
         break;
     case KEY_EXIT:
@@ -184,6 +181,8 @@ static int loop(void)
 
     while (d && SDL_PollEvent(&e))
     {
+        
+        
         switch (e.type)
         {
         case SDL_QUIT:
@@ -274,6 +273,15 @@ static int loop(void)
             st_wheel(e.wheel.x, e.wheel.y);
             break;
         }
+
+        // // JK - This changes one of the AXES!!!
+        // if(!timer){timer=0;}
+
+        // if(timer>0){
+        //     //1*curr_coins()*curr_clock()
+        // st_stick(0,(float)60);
+        // }
+        
     }
 
     /* Process events via the tilt sensor API. */
@@ -483,6 +491,15 @@ static void make_dirs_and_migrate(void)
     fs_mkdir("Screenshots");
 }
 
+// //JK time
+// uint64_t GetTimeStamp() {
+//     struct timeval tv;
+//     gettimeofday(&tv,NULL);
+//     return tv.tv_sec*(uint64_t)1000000+tv.tv_usec;
+// }
+
+
+
 /*---------------------------------------------------------------------------*/
 
 int main(int argc, char *argv[])
@@ -512,7 +529,6 @@ int main(int argc, char *argv[])
     }
 
     /* Intitialize configuration. */
-
     config_init();
     config_load();
 
@@ -568,6 +584,7 @@ int main(int argc, char *argv[])
 
             if (level_load(path, &level))
             {
+                
                 progress_init(MODE_STANDALONE);
 
                 if (progress_play(&level))
@@ -585,19 +602,52 @@ int main(int argc, char *argv[])
     else
         goto_state(&st_title);
 
-    /* Run the main game loop. */
+bool useRealTime = false;
+Uint32 fakeTime = 0;
 
-    t0 = SDL_GetTicks();
+        /* Run the main game loop. */
+   t0 = useRealTime ? SDL_GetTicks() : fakeTime;
 
     while (loop())
     {
-        if ((t1 = SDL_GetTicks()) > t0)
+        fakeTime += 10;
+
+        extern int replayInt;
+        if (replayInt) useRealTime = true;
+        
+        if ((t1 = useRealTime ? SDL_GetTicks() : fakeTime) > t0)
         {
             /* Step the game state. */
+            if(replayInt==0){
+                calcSpeed = gameSpeed;
+                //stepSpeed = gameSpeed*1.5f;
+            }
+            
+            else{
+                calcSpeed = 1;
+                //stepSpeed =1;
+            }
 
-            st_timer(0.001f * (t1 - t0));
+            
+            // if(I< step_being_explored-1 ){
+            //     variableSpeed = stepSpeed;
+            // }else{
+            //     variableSpeed = calcSpeed;
+            // }
+            
+
+
+
+
+
+
+
+
+            st_timer(0.001f * (t1 - t0)*calcSpeed);
 
             t0 = t1;
+
+
 
             /* Render. */
 
@@ -605,8 +655,10 @@ int main(int argc, char *argv[])
             st_paint(0.001f * t0);
             video_swap();
 
+/*
             if (config_get_d(CONFIG_NICE))
                 SDL_Delay(1);
+ */
         }
     }
 

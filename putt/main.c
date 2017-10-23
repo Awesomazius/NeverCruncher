@@ -62,12 +62,14 @@ static void toggle_wire(void)
     {
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         glEnable(GL_TEXTURE_2D);
+        glEnable(GL_LIGHTING);
         wire = 0;
     }
     else
     {
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         glDisable(GL_TEXTURE_2D);
+        glDisable(GL_LIGHTING);
         wire = 1;
     }
 #endif
@@ -148,7 +150,6 @@ static int loop(void)
                 toggle_wire();
                 break;
             case SDLK_RETURN:
-            case SDLK_KP_ENTER:
                 d = st_buttn(config_get_d(CONFIG_JOYSTICK_BUTTON_A), 1);
                 break;
             case SDLK_ESCAPE:
@@ -179,7 +180,6 @@ static int loop(void)
             switch (c)
             {
             case SDLK_RETURN:
-            case SDLK_KP_ENTER:
                 d = st_buttn(config_get_d(CONFIG_JOYSTICK_BUTTON_A), 0);
                 break;
             case SDLK_ESCAPE:

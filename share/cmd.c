@@ -139,6 +139,8 @@ PUT_FUNC(CMD_TILT_ANGLES)
 }
 END_FUNC;
 
+
+//JK here i try to set the tilt to a constant
 GET_FUNC(CMD_TILT_ANGLES)
 {
     cmd->tiltangles.x = get_float(fp);

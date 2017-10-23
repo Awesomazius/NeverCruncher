@@ -148,4 +148,11 @@ extern float SPEED_FACTORS[];
 
 /*---------------------------------------------------------------------------*/
 
+//jk export fn and variable
+extern int returns_time_remaining(void);
+int savetimeremaining;
+
+void reset_time_remaining(void);
+
+
 #endif

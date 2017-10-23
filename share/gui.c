@@ -28,6 +28,12 @@
 #include "theme.h"
 
 #include "fs.h"
+#include "fs_rwops.h"
+
+
+
+//JK
+timetaken=0;
 
 /*---------------------------------------------------------------------------*/
 
@@ -1588,13 +1594,23 @@ static void gui_paint_count(int id)
 
 static void gui_paint_clock(int id)
 {
-    int i  =   widget[id].size;
+  
+    int i  =   widget[id].size;        
     int mt =  (widget[id].value / 6000) / 10;
     int mo =  (widget[id].value / 6000) % 10;
     int st = ((widget[id].value % 6000) / 100) / 10;
     int so = ((widget[id].value % 6000) / 100) % 10;
     int ht = ((widget[id].value % 6000) % 100) / 10;
     int ho = ((widget[id].value % 6000) % 100) % 10;
+
+    //savetimeremaining= widget[id].value;
+    if(timetaken==0 && widget[id].value!=0){
+
+        totaltime = widget[id].value;
+        timetaken = 1;
+    }
+    
+
 
     GLfloat dx_large = (GLfloat) widget[digit_id[i][0]].text_w;
     GLfloat dx_small = (GLfloat) widget[digit_id[i][0]].text_w * 0.75f;
@@ -1710,6 +1726,7 @@ void gui_paint(int id)
     {
         video_push_ortho();
         {
+            glDisable(GL_LIGHTING);
             glDisable(GL_DEPTH_TEST);
             {
                 draw_enable(GL_FALSE, GL_TRUE, GL_TRUE);
@@ -1725,6 +1742,7 @@ void gui_paint(int id)
                 glColor4ub(gui_wht[0], gui_wht[1], gui_wht[2], gui_wht[3]);
             }
             glEnable(GL_DEPTH_TEST);
+            glEnable(GL_LIGHTING);
         }
         video_pop_matrix();
     }
@@ -1772,6 +1790,8 @@ void gui_pulse(int id, float k)
 void gui_timer(int id, float dt)
 {
     int jd;
+
+    
 
     if (id)
     {
@@ -2219,3 +2239,10 @@ int gui_maybe(int id, const char *label, int etoken, int dtoken, int enabled)
 }
 
 /*---------------------------------------------------------------------------*/
+
+
+
+int returns_total_time(){
+    return totaltime;
+}
+

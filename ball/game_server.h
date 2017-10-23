@@ -24,5 +24,21 @@ void  game_set_cam(int);
 void  game_set_rot(float);
 
 /*---------------------------------------------------------------------------*/
+//jk
+extern int returns_fall_state(void);
+int fallswitch;
+
+extern int returns_goal_state(void);
+int goalswitch;
+
+extern int returns_timeout_state(void);
+int timeoutswitch;
+
+
+// JK here i made a fn to return coins.
+extern int returns_coins_collected(void);
+
+
+
 
 #endif

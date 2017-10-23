@@ -95,6 +95,7 @@ void hud_init(void)
 
     if ((time_id = gui_clock(0, 59999, GUI_MED)))
     {
+        
         gui_set_rect(time_id, GUI_TOP);
         gui_layout(time_id, 0, -1);
     }
@@ -149,7 +150,7 @@ void hud_paint(void)
 {
     if (curr_mode() == MODE_CHALLENGE)
         gui_paint(Lhud_id);
-
+        
     gui_paint(Rhud_id);
     gui_paint(time_id);
 
@@ -162,6 +163,7 @@ void hud_paint(void)
 
 void hud_update(int pulse)
 {
+   
     int clock = curr_clock();
     int coins = curr_coins();
     int goal  = curr_goal();
@@ -332,3 +334,4 @@ void hud_speed_paint(void)
 }
 
 /*---------------------------------------------------------------------------*/
+

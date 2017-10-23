@@ -35,6 +35,10 @@
 
 #include "cmd.h"
 
+//JK
+int tempvalueneeded=0;
+
+
 /*---------------------------------------------------------------------------*/
 
 int game_compat_map;                    /* Client/server map compat flag     */
@@ -476,10 +480,17 @@ void game_client_draw(int pose, float t)
     game_draw(&gd, pose, t);
 }
 
+
 /*---------------------------------------------------------------------------*/
 
 int curr_clock(void)
 {
+    
+    //int valuetaken =  ceil(timer*100.f);
+    // if(valuetaken != tempvalueneeded){
+    //     savetimeremaining= valuetaken;
+    //      tempvalueneeded = valuetaken;
+    // }
     return (int) (timer * 100.f);
 }
 
@@ -547,3 +558,4 @@ void game_client_fly(float k)
 }
 
 /*---------------------------------------------------------------------------*/
+

@@ -25,10 +25,18 @@
 #include "level.h"
 #include "set.h"
 
+//JK global variable to export
+int maxCoins=0;
+
+//JK holds the file name, LEVEL NAMES MUST BE UNDER 100 CHARS!!!!
+const char * current_playfile[100];
+
 /*---------------------------------------------------------------------------*/
 
 static void scan_level_attribs(struct level *l, const struct s_base *base)
 {
+
+    
     int i;
 
     int have_goal = 0;
@@ -105,6 +113,8 @@ static void scan_level_attribs(struct level *l, const struct s_base *base)
 
     if (have_goal)
     {
+
+        maxCoins = l->scores[SCORE_COIN].coins[RANK_HARD];
         if (need_coin_easy)
             l->scores[SCORE_COIN].coins[RANK_EASY] = l->goal;
 
@@ -129,6 +139,7 @@ static void scan_level_attribs(struct level *l, const struct s_base *base)
 int level_load(const char *filename, struct level *level)
 {
     struct s_base base;
+    
 
     memset(level, 0, sizeof (struct level));
     memset(&base, 0, sizeof (base));
@@ -136,6 +147,7 @@ int level_load(const char *filename, struct level *level)
     if (!sol_load_meta(&base, filename))
     {
         log_printf("Failure to load level file '%s'\n", filename);
+        
         return 0;
     }
 
@@ -150,10 +162,35 @@ int level_load(const char *filename, struct level *level)
 
     sol_free_base(&base);
 
+    //JK removes unwanted chars
+        remove_all_chars(filename, '.');
+        remove_all_chars(filename, '/');
+
+
+    strcpy(current_playfile, filename);
+    //fprintf(stdout, "Level filename is %s\n",current_playfile  );
+
     return 1;
 }
 
 /*---------------------------------------------------------------------------*/
+
+//JK my function for removing CHARS
+void remove_all_chars(char* str, char c) {
+    char *pr = str, *pw = str;
+    while (*pr) {
+        *pw = *pr++;
+        pw += (*pw != c);
+    }
+    *pw = '\0';
+}
+
+//JK this returns the level
+const char * returns_the_level_string()
+{
+    return current_playfile;
+}
+
 
 int level_exists(int i)
 {
@@ -262,4 +299,11 @@ void level_rename_player(struct level *l,
 }
 
 /*---------------------------------------------------------------------------*/
+
+// jk exporting max coins in a level
+int returns_the_max_coins(){
+    return maxCoins;
+}
+
+
 

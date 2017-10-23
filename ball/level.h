@@ -78,4 +78,14 @@ void level_rename_player(struct level *, int, int, int, const char *);
 
 /*---------------------------------------------------------------------------*/
 
+//JK this gets the maximum Coins
+extern int returns_the_max_coins(void);
+
+//JK this removes unwanted dots and slashes
+void remove_all_chars(char* str, char c);
+
+// and this returns the level
+extern const char * returns_the_level_string(void);
+
+
 #endif

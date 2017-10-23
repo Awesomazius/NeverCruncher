@@ -63,7 +63,7 @@ static void *image_load_png(const char *filename, int *width,
 
     /* Initialize all PNG import data structures. */
 
-    if (!(fh = fs_open_read(filename)))
+    if (!(fh = fs_open(filename, "r")))
         return NULL;
 
     if (!(readp = png_create_read_struct(PNG_LIBPNG_VER_STRING, 0, 0, 0)))
@@ -141,7 +141,7 @@ static void *image_load_jpg(const char *filename, int *width,
     unsigned char *p = NULL;
     fs_file fp;
 
-    if ((fp = fs_open_read(filename)))
+    if ((fp = fs_open(filename, "r")))
     {
         struct jpeg_decompress_struct cinfo;
         struct jpeg_error_mgr         jerr;
