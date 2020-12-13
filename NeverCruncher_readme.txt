@@ -1,11 +1,11 @@
                NEVERCRUNCHER 1.0 Readme File
 
 NeverCruncher explores paths through Neverball levels with
-no knowledge of the level.
+no knowledge of the level layout.
 
 ********************Basic Operation**********************
 
-To crunch a level go to the linux command line go to the directory 
+To crunch a level from the Linux command line go to the directory 
 that holds the "Neverball.exe" executable file and write "-l" followed
 the path to the level sol file of the level you want NeverCruncher to 
 play. Like so; 
@@ -14,9 +14,8 @@ play. Like so;
 
 The graphics will be disabled and the level will be crunched until the
 goal condition is met. Pressing the escape key during crunching will 
-pause and re-enable graphics so progress can be seen.
-
-When goal conditions are met the terminal will display this message:
+pause and re-enable graphics so progress can be seen. When goal conditions
+are met the terminal will display this message:
 
 --------------GOAL achieved!!! -- writing log files.
 
@@ -24,7 +23,6 @@ Then the solution and statistics from the crunch will be written in the
 "AI Data" folder under the name of the level. Running the level again
 will replay with graphics the solution for the level. To recrunch the
 level the existing solution folder must be removed or renamed. 
-
 
 ****************Setting Parameters***************************
 
@@ -42,8 +40,9 @@ that need a high speed (for a jump or a bounce) to succeed.
 The desired number of coins per time variables are set in 
 "CoinBasedRewindFn()" in the ball/st_play.c file. These control  
 how hard the program will look for coins, how it will look and 
-when it will temporarily give up. Small changes to these can cause 
-large changes in the time taken to crunch a level.
+when it will temporarily give up. There are several functions 
+that explore in different ways. Small changes to these variables 
+can cause large changes in the time taken to crunch a level.
 
 *************************Building with Linux******************
 
