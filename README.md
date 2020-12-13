@@ -1,8 +1,8 @@
 # NeverCruncher 1.0
 
-This is Neverball 1.6 with a Reinforced Learning agent written into
-it that plays some Neverball levels. See Readme for instructions and
-the pdf of you are a Developer. 
+This is a modified fork of Neverball 1.6 with a Reinforced Learning agent 
+added that learns to play levels. See the Readme for instructions and the 
+pdf for an explanation of the methods used.  
 
 
 # Neverball
