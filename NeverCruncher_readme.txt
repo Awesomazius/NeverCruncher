@@ -1,6 +1,6 @@
                NEVERCRUNCHER 1.0 Readme File
 
-NeverCruncher explores paths through Neverball levels with
+NeverCruncher finds optimal paths through Neverball levels with
 no knowledge of the level layout.
 
 ********************Basic Operation**********************
