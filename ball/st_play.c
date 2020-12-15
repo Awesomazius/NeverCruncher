@@ -36,10 +36,10 @@
 #include "st_level.h"
 #include "st_shared.h"
 
-//Jim necessary lilbrary for getcwd command.
+//JimK- necessary lilbrary for getcwd command.
 #include <unistd.h>
 
-//JimK necessary Neverball headers.
+//JimK- necessary Neverball headers.
 #include "progress.h"
 #include "solid_all.h"
 #include "level.h"
