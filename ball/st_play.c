@@ -12,7 +12,7 @@
  * General Public License for more details.
  */
 
-/*The NeverCruncher logic is prefixed by "//JimK" */
+/*All NeverCruncher logic is contained in this file. It is prefixed by "//JimK" */
 
 
 #include "gui.h"
@@ -36,33 +36,36 @@
 #include "st_level.h"
 #include "st_shared.h"
 
-// for getcwd
+//Jim necessary lilbrary for getcwd command.
 #include <unistd.h>
 
-//JK headers I have Added 
+//JimK necessary Neverball headers.
 #include "progress.h"
 #include "solid_all.h"
 #include "level.h"
 #include "game_client.h"
 
-//JK Necessary globals
-bool exitPlay = true;  // the bool to exit the run
-int runCounter=0;       // the count of each run, this is only used to differentiate the first run.
- 
+//JimK- NeverCruncher globals-------------------------------------------------------------------------------------
+
+bool exitPlay = true;             // A bool to exit the run
+
+int runCounter=0;                 // the count of each run, used for statistics setup is done the first run
 bool spanBool = false;  // this was an idea I had to evaluate only after a span had elpsed, it was abandoned and I intended to 
                         // remove it from the code.
 
-int exploration_option_choice=0;    // the one of nine options that can be chosen: N NE E SE S SW W NW and <no tilt>.
+int exploration_option_choice=0;    // choice of nine options that can be chosen: N NE E SE S SW W NW and <no tilt>.
 
 
-int optionArrayPosition=0;  //just an int that gives array entries an index.
+int optionArrayPosition=0;  // int indexing the array of previous direction options.
 
-float X=0;  // positions
+float X=0;  // position of ball in level.
 float Z=0;
-float options_tried[9][6];  // a 2d array of options chosen and properties.This is filled for each step evaluated
+
+
+float options_tried[9][6];  // a 2d array of options chosen and properties.This is filled as each step is evaluated
 float options_chosen[3000][4];  // a larger array holding options chosen and properties for all steps decided on in the level.
 
-char direction[4]= "nul";   //a char array for directions chosen, this is not used.
+char direction[4]= "nul";   //a char array for directions chosen
 float randmax = RAND_MAX;
 float reward=0;
 int COINS;
