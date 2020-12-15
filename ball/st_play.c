@@ -48,66 +48,48 @@
 //JimK- NeverCruncher globals-------------------------------------------------------------------------------------
 
 bool exitPlay = true;             // A bool to exit the run
-
 int runCounter=0;                 // the count of each run, used for statistics setup is done the first run
-bool spanBool = false;  // this was an idea I had to evaluate only after a span had elpsed, it was abandoned and I intended to 
-                        // remove it from the code.
+bool spanBool = false;            // a span variable. for evaluating after spans
+                        
+int exploration_option_choice=0;    // choice of the nine options that can be chosen: N NE E SE S SW W NW and no tilt.
+int optionArrayPosition=0;          // int indexing the array of previous direction options.
 
-int exploration_option_choice=0;    // choice of nine options that can be chosen: N NE E SE S SW W NW and <no tilt>.
-
-
-int optionArrayPosition=0;  // int indexing the array of previous direction options.
-
-float X=0;  // position of ball in level.
+float X=0;                          // X and Z position of ball in level.
 float Z=0;
 
+float options_tried[9][6];        // a 2d array of option chosen and properties.This is filled as each step is evaluated.
+float options_chosen[3000][4];    // a larger array holding all options chosen and properties for all steps decided on in the level.
+char direction[4]= "nul";         //a char array for directions chosen
 
-float options_tried[9][6];  // a 2d array of options chosen and properties.This is filled as each step is evaluated
-float options_chosen[3000][4];  // a larger array holding options chosen and properties for all steps decided on in the level.
-
-char direction[4]= "nul";   //a char array for directions chosen
 float randmax = RAND_MAX;
-float reward=0;
-int COINS;
 
+float reward=0;                 // reward signal.
+int COINS;                      // number of coins collected.
 
-int nearRewindCounter[3000];    //ignore
+int nearRewindCounter[3000];    // near middle and far rewind functions rewind and replay steps to try for more coins.
 int midRewindCounter[3000];
 int farRewindCounter[3000];
-
-int coins_at_step[3000];    //the number of coins at every step.
-
-//base path for write functions
+int coins_at_step[3000];        //the number of coins at every time step.
 char total_path[200];
-int steps_since_coin=0;     // the number of (25* 1/90 second) steps since the last coin
 
-//JK Huge ARRAY
-int hateStates[3000][9];    // these are the hatestates, nine columns for each step recorded, if that column has a one in it 
-                            // then that option(1-9) is skipped when the state is re-explored
-
-int old_options[3000];  // the recorded chosen option for each state.
-
-
-bool fallpossible = false;  // a bool that allows only one fallout to be detected.
-
+int steps_since_coin=0;             // the number of  time-steps since the last coin
+int hateStates[3000][9];            // "hatestates" used in fallout correction.
+int old_options[3000];              // the recorded chosen option for each state.
+bool fallpossible = false;          // a bool that allows only one fallout to be detected.
 int TspanRewindCounter[3000][20];   // for each of the (about 20) optimisations the number of times the statement has been tried is counted.
-int S=1;                    // ignore this, it should always be one.
+int S=1;                    
 
+// variables used for statistics.
+float Xpos, Zpos;                             // X and Z coordinates. 
+float XposGrid, ZposGrid;                     // X and Z grid coordinates.
+float PNV[800000][4];                         // position and velocity for all steps.
+int step;                                     // current step.
+float FO[100000][3];                          // Fallout X Z and speed magnitude.
+int fallouts;                                 // number of fallouts
+float HeuristicPositions[3000][2];            // record of positions throughout the level.
 
-//stats stuff
-float Xpos, Zpos;   
-float XposGrid, ZposGrid;   // the girdpos is what square the coords are in.
-float PNV[800000][4];   //this array records position and velocity for all steps, 800 000 is a guess at how many that would be.
-int step;               // just an int for recording the above.
-
-float FO[100000][3]; // number of fallouts, 100000 is safe enough
-int fallouts;
-
-float HeuristicPositions[3000][2];  //just a reocrd of positions throughout the level.
-
-bool ninthOPT=false;    // this bool is necessary in the case that the ninth option is skipped by a hatestate and the state being explored must be changed.
-
-int failedHeuristicCounter;     // number of times the ball is in the same square for consecutive steps. ** This could be used to improve on exploration **
+bool ninthOPT=false;            // fallout correction variable used when all directions have been blocked.
+int failedHeuristicCounter;     // number of times the ball is in the same square for consecutive steps. ** This is used to improve on exploration **
 
 int steps_since_coinAtgivenstep[3000];  //the steps since a coin was collected at each step.
 
