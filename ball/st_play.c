@@ -715,32 +715,24 @@ int rightPerpendicularDirection(int input){
 
 // Each number controls how many times the optimisations should look for coins via noise based optimisation or direction based optimisation.
 // they should be a multiple of nine for direction based optimisation. These slow learning greatly.
-int iterateNumbers[12] = {9,9,9,9,9,9,9,9,9,9,9,9};     // the repetitions of each statement in the OPTIMIZATION
+int iterateNumbers[12] = {9,9,9,9,9,9,9,9,9,9,9,9};   
 
+// this is the direction based optimisation with bools that can do noise based optimisation steps within.
+// it causes the paths to fan out (*see pdf).
+int CoinBasedRewindFn(){        
 
-int CoinBasedRewindFn(){        // this is the direction based optimisation with bools that do noise based optimisation.
-
-        // These statements, if triggered set the direction for a number of steps in the hope that they will not be triggered if the
-        // ball follows these directions and collects coins so that the statement is no longer true. If the statement is true enough
-        // times the rewind counter will fill and be equal to the iterateNumbers value and this will make the statement untrue.
-
-        
-        int optimisation_arrayNo=0;        // the statement number that is executed. This tells us which counter to increment.                 
-
-        // For example the if statement below checks first the counter is less than the iterateNumbers value and
-        // the coin change in one step is less than one coin.
-
-
+        // These statements, if triggered set the direction for a number of steps in the hope that local goal conditions will be met. 
+        // If it times out, less ambitious goals will be tried.
 
         
+        int optimisation_arrayNo=0;        // the index of the goal to attempt           
 
-
-
+                
         if      (TspanRewindCounter[step_being_explored][0]<iterateNumbers[0] && 
         coins_at_step[step_being_explored]-coins_at_step[step_being_explored-1]<1 && steps_since_coin==1){
             optimisation_arrayNo=0; 
 
-            global_NBO = false;//this bools allows noise based optimisation statements in this method.
+            global_NBO = false; //this bools allows noise based optimisation statements in this method.
         }
         
         else if      (TspanRewindCounter[step_being_explored][1]<iterateNumbers[1] && 
@@ -820,8 +812,7 @@ int CoinBasedRewindFn(){        // this is the direction based optimisation with
             global_NBO = true;
         }
 
-        else{       // if this executes the optimisation has finished till statements become true again, ie steps since 
-                    // coin changes, ie a coin found.
+        else{       // if this executes the optimisation has finished till goal statements become true again..
             global_NBO = false;
             return 0;
         }
@@ -830,7 +821,8 @@ int CoinBasedRewindFn(){        // this is the direction based optimisation with
         // the relevant counter is incremented.
         TspanRewindCounter[step_being_explored][optimisation_arrayNo]++;
 
-        numberofcorrections++;          // stats for correction/optimisation (I call this both)
+        // stats for the optimisation.
+        numberofcorrections++;          
         correctionLOG[numberofcorrections][0]= numberofcorrections;
         correctionLOG[numberofcorrections][1]= Xpos;
         correctionLOG[numberofcorrections][2]= Zpos;
@@ -840,12 +832,11 @@ int CoinBasedRewindFn(){        // this is the direction based optimisation with
 
         
 
-        // here I am setting the option to be locked  DBO
+        // the direction to be locked 
         savedopt = TspanRewindCounter[step_being_explored][optimisation_arrayNo];
 
-
-        //steps_since_coin-=1;   //ignore last step
-        deleteHS(steps_since_coin); // this is important, hatestates are wiped for the states being optimised, so all options are explored.
+        // hatestates [from the fallout correction method] are wiped for the states being optimised, so all options are explored.
+        deleteHS(steps_since_coin); 
 
 
         // the last optimisation must return the ball to the start without locking the step.
@@ -911,7 +902,7 @@ int CoinBasedRewindFn(){        // this is the direction based optimisation with
     
 
 
-//wiping the hatestates
+// function to wipe the hatestates [from the fallout correction function]
 int deleteHS(int rewinding){
 
     for(int i=0; i<rewinding; i++){
@@ -923,7 +914,7 @@ int deleteHS(int rewinding){
 }
 
 
-//this is rubbish from the noise based optimisation.
+// this is from the noise based optimisation.
 int farRewindFn(){
     if(farRewindCounter[step_being_explored]<6 && steps_since_coin==12 ){
         farRewindCounter[step_being_explored]++;
@@ -946,7 +937,7 @@ int farRewindFn(){
 //this explores the options for the given state/step 
 int exploreOptions(float Xvelocity, float Zvelocity){
 
-    // if doing direction based optimisation then leave the option as savedopt 
+    // this blocks normal exploration during direction based optimisation.
     if (LockRecord!=option_locked_for_steps && option_locked_for_steps>0){
             exploration_option_choice= savedopt;
         }
@@ -957,7 +948,7 @@ int exploreOptions(float Xvelocity, float Zvelocity){
 
     //steps_since_fallout>1 &&
 
-
+    // clampling the speed by reversing tilt only happens if the ball is far enough away from a fallout.
     if( (Xvelocity*Xvelocity+ Zvelocity*Zvelocity)> MAXSPEED && replayInt==0){
          
          int reverse_option = find_prevalent_Tilt(Xvelocity, Zvelocity);//this is misleading, the find_prevalent_Tilt method returns the reverse direction to the velocity
@@ -966,20 +957,19 @@ int exploreOptions(float Xvelocity, float Zvelocity){
             deccelerating_evaluate_anyway = true;
             fprintf(stdout, "velocity %f is too high applying tilt correction. Option:    %d\n",
              (Xvelocity*Xvelocity+ Zvelocity*Zvelocity), exploration_option_choice);
-             //return 2;
-         }// if hatestate found do nothing the following code will take care of it.
+             
+         }
          
      }
 
+    // skip tilts marked as hatestates.
     if(hateStates[step_being_explored][exploration_option_choice] == 1){    // if a hatestate exists for that step and option, skip the option.
-        
-        
         
         fprintf(stdout, "-------------------------------State   %d      -------%d BLOCKED\n",step_being_explored, exploration_option_choice);
         exploration_option_choice++;    // increments the option being explored.
         
         
-        if(exploration_option_choice==9){   // if the option to be skipped is the last one some trickery is needed.
+        if(exploration_option_choice==9){   // if the option to be skipped is the last one the previous step must be tried.
 
             ninthOPT = true;            
             
@@ -993,7 +983,7 @@ int exploreOptions(float Xvelocity, float Zvelocity){
         
     
 
-    switch(exploration_option_choice){      // these are the directions being explored, the strings do nothing currently.
+    switch(exploration_option_choice){      // these are the tilt directions to try 
     
             case 0:
                 X=0;   Z=0;   strncpy ( direction, "___", sizeof(direction) );
@@ -1027,26 +1017,23 @@ int exploreOptions(float Xvelocity, float Zvelocity){
         return 0;
 }
 
-// here the options are evaluated and the one with the most reward is chosen and saved as the tilt to be read for that state/step
-// this is a horribly hacky function but is really the crux of the program.
+// this writes the reward signal for options that are tried.
 int evaluateOptions(){
 
-        fprintf(stdout, "\nTest statement 3");
-
-        if (LockRecord==option_locked_for_steps){   // this unlocks the direction for the first step in a direction based optimisation
+        if (LockRecord==option_locked_for_steps){   // this unlocks the direction for the [allowed] noise based step in a direction based optimisation
             unlock4onestep = true;
         }
 
 
 
-        if(ninthOPT==false){    // normal options. (ie not skipping the last option whilst exploring a state).
+        if(ninthOPT==false){    // this bool is only true for the last option to be explored.
 
         int HeuristicInt = Heuristic(XposGrid, ZposGrid);   // this calls a method which compares position with previous positions and returns one if it is repeated
 
         reward= COINS*4 - HeuristicInt*2  + (rand()/randmax)*0.6;  /// reward signal. You can see coins are twice what the maximum Heuristic pernalty is
                                                                     // and the noise function is a fraction of .6
 
-
+        // statistics for the options and reward.
         options_tried[optionArrayPosition][0]= reward;      // so these are the columns of the options_tried array which is sorted by the first column
         options_tried[optionArrayPosition][1]= X;
         options_tried[optionArrayPosition][2]= Z;
@@ -1054,32 +1041,28 @@ int evaluateOptions(){
         options_tried[optionArrayPosition][4]= exploration_option_choice;
         options_tried[optionArrayPosition][5]= HeuristicInt;
 
-        //fprintf(stdout, "*********************TRYING OPTION            %d         ARRAY Position:  %d\n", 
-        //exploration_option_choice, optionArrayPosition);
-
-        optionArrayPosition++;      // increments index as options are tried.
         
+        optionArrayPosition++;          // increments index as options are tried.
         exploration_option_choice++;    // this increments the options tried as one is evaluated.   
         }
 
-        fprintf(stdout, "\nTest statement 4");
+        
 
 
-        if(ninthOPT==true){         // a little blurb for the skipping of the last option.
+        if(ninthOPT==true){         // the last option must be skipped.
             fprintf(stdout, "eighth option skipped. Evaluating\n");
             ninthOPT=false;
         }  
         
         if(option_locked_for_steps>0 && unlock4onestep==false){     // this keeps the option fixed for direction based optimisation.
-            exploration_option_choice--;    // un increment the option that was incremented. Is easier than a bunch of if statements
+            exploration_option_choice--;    // un increment the option that was incremented. 
             fprintf(stdout, "Lockstep Integer: %d. Option Locked: %d \n", option_locked_for_steps, (int)options_tried[0][4]);
             
         }
 
-        fprintf(stdout, "\nTest statement 5");
-
-        if(deccelerating_evaluate_anyway==true){    // if the tilt has been set to be contrary to the velocity then just chose the option given
-                                                    // I do this lazily by setting the exploration option choice to 9 so as it is picked up by the following method
+        
+        // If the speed cap is active exploration is not done.
+        if(deccelerating_evaluate_anyway==true){    
 
             deccelerating_evaluate_anyway = false;
             fprintf(stdout, "decceleration tilt received ---  exploration_option_choice : %d\n", (int)options_tried[0][4]);
@@ -1087,9 +1070,7 @@ int evaluateOptions(){
         }
 
 
-        fprintf(stdout, "\nTest statement 6");
-
-
+        // this chooses the best tilt of the 9 for the given step by the reward signal.
         if(exploration_option_choice==9 || (option_locked_for_steps>0 && unlock4onestep==false) ){             
             // this sorts the (up to 9) options that have been tried and takes the best one and adds it to the list of tilts.
 
@@ -1099,9 +1080,8 @@ int evaluateOptions(){
                 unlock4onestep = false;
                 fprintf(stdout, "first step of optimisation unlocked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
             }
-            //deccelerating_evaluate_anyway = false;
             
-            //this is just adding to the position and velocity array
+            // statistics for chosen step
             step++;
             PNV[step][0]= step;
             PNV[step][1]= Xpos;
@@ -1124,6 +1104,7 @@ int evaluateOptions(){
             
             HeuristicPositions[step_being_explored+i][0] = XposGrid;    // adds position at step to heuristic grid.
             HeuristicPositions[step_being_explored+i][1] = ZposGrid;
+              
             }
 
             if(options_chosen[step_being_explored][3] == options_chosen[step_being_explored-1][3] && step_being_explored>1 ){
@@ -1171,15 +1152,7 @@ int evaluateOptions(){
 
             CoinBasedRewindFn();  // This is the call to the OPTIMIZATION. This is currently Direction based with a random first tilt.
             step_being_explored+=S; // else move on. S is one and should be removed.                
-                
-                      
         }
-
-            
-        
-
-
-
     return 0;
 }
 
@@ -1240,7 +1213,7 @@ int exitandstartRun(){
 }
 
 
-int readTiltFile(){// this reads the tilt from file and sets the replayInt to one so the level plays a loop.
+int readTiltFile(){ // this reads the tilt from file replays the path found.
     
     char str0[400];
     int readstep =0;
@@ -1258,7 +1231,6 @@ int readTiltFile(){// this reads the tilt from file and sets the replayInt to on
 
     step_being_explored = readstep;
     replayInt = 1;
-
 
     return 0;
 }
@@ -1290,11 +1262,7 @@ int checkfordata(){     // checks whether file exists
     return 0;
 }
 
-
-
-
-
-
+// this writes log files on success.
 int writeEverything(){
 
     fprintf(stdout, "\n\n\n  --------------GOAL achieved!!! -- writing log files.\n\n");    // this will print if the level is solved.
@@ -1307,17 +1275,12 @@ int writeEverything(){
     writeFO();
     writeCorrectionLOG();
 
-    
-
-
     return 0;
 }
 
 
 
-
-
-int setupFolder(){  // this makes the directory should it not exist already.
+int setupFolder(){  // this makes the directory folder 
     const char * levelname;
     levelname= returns_the_level_string(); 
     char base_folder[21] = "AI_DATA/";
@@ -1329,7 +1292,7 @@ int setupFolder(){  // this makes the directory should it not exist already.
     return 0;
 }
 
-int writeMaster(){  // this is just a file that pretty much says whether the level has been crunched
+int writeMaster(){  
     
     FILE *fpm;   
     char fileNameString01[15] = "/MASTER.txt";
@@ -1343,8 +1306,8 @@ int writeMaster(){  // this is just a file that pretty much says whether the lev
     return 0;
 }
 
-
-int writePNV(){     // the rest of these just write the stats to file.
+// this writes position and velocity to file.
+int writePNV(){     
     
     FILE *fpm;   
     char fileNameString02[9] = "/PNV.txt";
@@ -1361,7 +1324,7 @@ int writePNV(){     // the rest of these just write the stats to file.
 }
 
 
-
+// the log of optimisations and corrections to the path.
 int writeCorrectionLOG(){
     
     FILE *fpm;   
@@ -1383,7 +1346,7 @@ int writeCorrectionLOG(){
 
 
 
-
+// log of all fallouts.
 int writeFO(){
     
     FILE *fpm;   
@@ -1401,7 +1364,7 @@ int writeFO(){
 }
 
 
-
+// writes the tilts used in the successful path.
 int writeTiltFile(){
     
     FILE *fpm;   
@@ -1419,15 +1382,12 @@ int writeTiltFile(){
 }
 
 
-
-
-
 int file_exist (char *filename)
 {
   struct stat   buffer;   
   return (stat (filename, &buffer) == 0);
 }
-// end of NeverCruncher code.
+//JimK - End of the NeverCruncher code.
 
 static int play_loop_gui(void)
 {
