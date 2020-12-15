@@ -12,6 +12,7 @@
  * General Public License for more details.
  */
 
+/*The NeverCruncher logic is prefixed by "//JimK" */
 
 
 #include "gui.h"
