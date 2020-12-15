@@ -485,13 +485,19 @@ int ball_AI_Controller(){
     return 0;
 }
 
-
-int falloutCorrectionMethod(float Xvel, float Yvel, float Zvel){    // rewinds step_being_explored a number of steps based on ball speed magnitude.
+// Fallout correction method. Retrospectively changes path of ball that led to fallout.
+// by replaying the path with a change before it left the table.
+int falloutCorrectionMethod(float Xvel, float Yvel, float Zvel){ 
+ 
+ // horizontal speed of ball that has fallen out.
 float magSQ = Xvel*Xvel + Zvel*Zvel;
 
-    if(returns_fall_state()==1 && option_locked_for_steps==0 && global_NBO == false ){     // the second argument is so fallouts are not tested for during direction based optimisation.
+    // detects fallout and rewinds based on speed. Second and third arguments relate to noise based optimisation.
+    if(returns_fall_state()==1 && option_locked_for_steps==0 && global_NBO == false ){     
         int N=0;
-        if (magSQ < 4.5){       // these numbers are guesswork, and are probably overestimates but were found to work.
+      
+        // these numbers of steps rewound were experimentally determined
+        if (magSQ < 4.5){       
             N=2;
         }
         else if (magSQ>4.5 && magSQ<12){
@@ -506,26 +512,28 @@ float magSQ = Xvel*Xvel + Zvel*Zvel;
         else{
             N=6;
         }
-        // sets the array value that corresponds to the old option at the old time to be one.
+             
+        // tilt judged to be responsible for failure is recorded as a "hatestate" and will not be used.
         hateStates[ step_being_explored-N  ][  old_options[step_being_explored-N]   ] =1; 
 
-        FO[fallouts][0] = Xpos;     // just a record of fallouts for the stats.
+        // record of fallouts for the statistics.
+        FO[fallouts][0] = Xpos;     
         FO[fallouts][1] = Zpos;
         FO[fallouts][2] = magSQ;
         fallouts++;
 
-
+        // terminal output.
         fprintf(stdout, "xxxxxxxxxxx --- fallout from state %d.    Rewinding %d steps bad Option:--------     %d\n",
           step_being_explored-N, N,old_options[step_being_explored-N] );
 
-
+        //managing hatestates when all nine options have been tried.
         int hs_counter=0;
         for (int i=0; i<9; i++){
-            if (hateStates[step_being_explored-N][i] == 1){ // check for full rows of hatestate array, in which case all options have been blocked.
+            if (hateStates[step_being_explored-N][i] == 1){ 
                 hs_counter++;
             }
         }
-
+      
         if(hs_counter==9){
             for (int i=0; i<9; i++){
                     hateStates[step_being_explored-N][i]=0; // wipe array if full.                    
@@ -538,26 +546,18 @@ float magSQ = Xvel*Xvel + Zvel*Zvel;
         }
 
         
-
-        if((step_being_explored-N)<= 1){        // ensures doesn't rewind past the start of the level.
+        // code to ensure rewinds don't pass the start of the level.
+        if((step_being_explored-N)<= 1){        
             step_being_explored = 1;
         }else{
             step_being_explored-=(N);
         }
 
-        // The steps since a coin is set to the earlier value. 
-        // This I cannot remember doing, if the state being rewound to is MORE steps since a coin than the current step then zero the steps since coin?
+                      
+        // This updates the steps since coin to match the rewind.
+        steps_since_coin = steps_since_coinAtgivenstep[step_being_explored]-1;    // this sets the steps since coin to the relevant value.      
+        exploration_option_choice=0; // zero option choice for rewind [***]
         
-
-        // if there were less states since the coin that far back then reset steps_since_coin 
-        //if(steps_since_coin > (steps_since_coinAtgivenstep[step_being_explored]-1)){
-        steps_since_coin = steps_since_coinAtgivenstep[step_being_explored]-1;    // this sets the steps since coin to the relevant value.
-        // }else{
-        //     steps_since_coin = 0;   // zero coins since exploration if rewinding to a worse state.
-        // }
-
-        exploration_option_choice=0; // zero option choice for rewind.
-        //steps_since_fallout=0;  // zero steps_since_fallout
         optionArrayPosition = 0;
         
         return 1;
@@ -566,12 +566,14 @@ float magSQ = Xvel*Xvel + Zvel*Zvel;
     return 0;
 }
 
-
-int find_prevalent_Tilt(float Xv, float Zv){    // this finds what quadrant of 2PI the velocity angle is in.
+// prevalent direction of ball.
+int find_prevalent_Tilt(float Xv, float Zv){    
     int tilt=0;
+  
+    // negative values are mapped to real ones
     double angle = atan2(-Zv,Xv);
     if(angle<0){
-        angle += 2*PI;          // negative values are mapped to real ones
+        angle += 2*PI;          
     }
     double division = PI/8;
     if(angle<=division || angle>=division*15){
@@ -604,10 +606,9 @@ int find_prevalent_Tilt(float Xv, float Zv){    // this finds what quadrant of 2
 }
 
 
-
-int getReverseDirection(int input){         // finds the corresponding quadrant that is contrary to the balls vector.
-
-    //there is a mathsy way to do this, I haven't the time. 
+// finds the corresponding quadrant that is contrary to the balls vector.
+int getReverseDirection(int input){         
+ 
     int output =0;
     switch (input){
         case 0:
@@ -641,7 +642,8 @@ int getReverseDirection(int input){         // finds the corresponding quadrant 
     return output;
 }
 
-int leftPerpendicularDirection(int input){      // finds the quadrant left perpendicular to the balls vector.
+// finds the quadrant left perpendicular to the balls vector. this is useful to create left curling paths.
+int leftPerpendicularDirection(int input){      
 
     int output =0;
     switch (input){
@@ -676,9 +678,8 @@ int leftPerpendicularDirection(int input){      // finds the quadrant left perpe
     return output;
 }
 
-
-int rightPerpendicularDirection(int input){     // finds the quadrant right perpendicular to the balls vector.
-
+// finds the quadrant right perpendicular to the balls vector. Useful to create right curling paths.
+int rightPerpendicularDirection(int input){     
     int output =0;
     switch (input){
         case 0:
@@ -712,12 +713,9 @@ int rightPerpendicularDirection(int input){     // finds the quadrant right perp
     return output;
 }
 
+// Each number controls how many times the optimisations should look for coins via noise based optimisation or direction based optimisation.
+// they should be a multiple of nine for direction based optimisation. These slow learning greatly.
 int iterateNumbers[12] = {9,9,9,9,9,9,9,9,9,9,9,9};     // the repetitions of each statement in the OPTIMIZATION
-// these should be a multiple of eight plus one for DBO, for NBO they can be anything
-// These slow the program greatly. I see no good reason to do more than 9, 17 max.
-
-
-
 
 
 int CoinBasedRewindFn(){        // this is the direction based optimisation with bools that do noise based optimisation.
