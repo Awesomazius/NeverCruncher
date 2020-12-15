@@ -91,23 +91,18 @@ float HeuristicPositions[3000][2];            // record of positions throughout 
 bool ninthOPT=false;            // fallout correction variable used when all directions have been blocked.
 int failedHeuristicCounter;     // number of times the ball is in the same square for consecutive steps. ** This is used to improve on exploration **
 
-int steps_since_coinAtgivenstep[3000];  //the steps since a coin was collected at each step.
-
-//int steps_since_fallout;                // not useful really unless you want to count fallout frequency
-//int steps_since_falloutAtGivenStep[3000];
-
-bool deccelerating_evaluate_anyway = false;     // this is a bool that allows the tilt to be set contrary to the velocity and fixes it so it is evaluated and exploration options are not tried. 
-
-int option_locked_for_steps=0;          // the number of steps the option is locked for, in Direction Based Optimisation.
+int steps_since_coinAtgivenstep[3000];          // the steps since a coin was collected at each step.
+bool deccelerating_evaluate_anyway = false;     // this is a bool that allows the tilt to be set contrary to the direction of velocity to slow down the ball.
+int option_locked_for_steps=0;                  // the number of steps the direction option is locked for, as used in Direction Based Optimisation.
 
 
-int LockRecord =0;  // a counter of how many steps to lock direction for.
-bool unlock4onestep=false;  // this allows a random step in the direction based optimisation
-bool decrement_lockstep=false;  //bool allows the number of steps the direction is locked for to change.
-int savedopt = 0;   // saves the direction that is locked.
+int LockRecord =0;              // a counter of how many steps to lock direction for.
+bool unlock4onestep=false;      // this allows a single random step in the direction based optimisation
+bool decrement_lockstep=false;  // bool allows the number of steps the direction is locked for to change.
+int savedopt = 0;               // saves the direction that is locked.
 
 float correctionLOG[8000][5];   // the number of times the optimisation is exectuted.
-int numberofcorrections = 0;    // should be named number of optimisations. I called them corrections also
+int numberofcorrections = 0;    // should be named number of optimisations attempted.
 
 bool global_NBO= false; //this bools allows noise based optimisation statements in the optimisation method.
 // It means that fallouts are ignored so must be set false by the optimisation when not being used.
@@ -401,13 +396,13 @@ static int rot_get(float *v)
 static int fast_rotate;
 static int show_hud;
 
-//This is the beginning of the NeverCruncher Code.
+//JimK- NeverCruncher Project Code.
 int ball_AI_Controller(){
 
-    bool doneonceforexploration = true;     // These bools allow the exploration and evaluation to be done once.
-    bool doneonceforevaluation= true;
+    bool doneonceforexploration = true;     // These bools allow the exploration and evaluation.
+    bool doneonceforevaluation = true;
 
-    if(exitPlay==true){                     // This flag calls the method to reset variables for a new run. Or to setup the first run.
+    if(exitPlay==true){                     // This flag calls the method to set variables for a new run. Or to setup the first run.
         exitandstartRun();
     }
 
@@ -1216,20 +1211,26 @@ int cmp (const void * a, const void * b)
 
 
 int exitandstartRun(){
-    progress_same();// this is a Neverball method that resets the game.
-    goto_state(&st_play_loop);//this is a Neverball method that restarts play.
-    NinetyHZCounter=0;// This zeros the counter, it is so named as it is incremented by Neverball every 1/90 of a second
-    I=0;// this is the current state, which is the timestep the ball is currently at.
-    if(runCounter==0){// this is the runcounter and is zero at the first run.
-        srand( (unsigned) time(NULL) * getpid());   // the seed. <You may wanna set this to get the same result each time, or to compare methods>
+    progress_same();              // this is a Neverball method that resets the game.
+    goto_state(&st_play_loop);    // this is a Neverball method that restarts play.
+    NinetyHZCounter=0;            // This zeros the counter, it is incremented by Neverball every 1/90 of a second
+    I=0;                          // this is the current state counter, which is the timestep the ball is currently at.
+  
+  
+    if(runCounter==0){                              // The runcounter and is zero at the first run.
+        srand( (unsigned) time(NULL) * getpid());   // random seed.
         fprintf(stdout, "\n seed initialized\n");
-        step_being_explored =1;// this is the step that gets explored and evaluated.
-        exploration_option_choice =0;//this is the option currently being explored for that step/state.
-        optionArrayPosition =0;// this is the array index of the option being evaluated.
-        replayInt=0;//this is one when the game has been solved and loops the level.
-        fallpossible = true;//just a bool that allows only one fallout to be detected per run.
+      
+        // exploration vallues are zeroed.
+        step_being_explored =1;
+        exploration_option_choice =0;
+        optionArrayPosition =0;
+        replayInt=0;
+        fallpossible = true;
         step=0;
-        if(checkfordata()==1){  // this checks whether level data exists already.
+      
+        // this checks for existing crunch data for the level.
+        if(checkfordata()==1){  
             fprintf(stdout, "Old data Found\n");
             readTiltFile();
         }
