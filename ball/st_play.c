@@ -402,30 +402,26 @@ int ball_AI_Controller(){
     bool doneonceforexploration = true;     // These bools allow the exploration and evaluation.
     bool doneonceforevaluation = true;
 
-    if(exitPlay==true){                     // This flag calls the method to set variables for a new run. Or to setup the first run.
+    if(exitPlay==true){                     // This flag calls the method to set variables for a new run or replay the existing run.
         exitandstartRun();
     }
 
-   
-
-
-
     COINS = returns_coins_collected();
-    float Xvel =returns_ball_X_velocity();
-    float Yvel =returns_ball_Y_velocity();
-    float Zvel =returns_ball_Z_velocity(); 
+    float Xvel = returns_ball_X_velocity();
+    float Yvel = returns_ball_Y_velocity();
+    float Zvel = returns_ball_Z_velocity(); 
 
-    //returns_timeout_state()==1
+    
 
-    if(returns_timeout_state()==1 && replayInt==0){ //set the goal here. When the goal is reached we write to file and loop.
-                                                    // the program often crashes at this point but the data is written successfully and so can be restarted.
+    if(returns_timeout_state()==1 && replayInt==0){ //goal state is found and data is written here.
+                                                    .
         writeEverything();
         exitPlay=true;
         return 0;
     }
 
 
-    if(fallpossible == true ){                      // should test for fallout once a run, and marks hatestates with the falloutCorrectionMethod.
+    if(fallpossible == true ){                      // tests for fallout calling the fallout correction method.
         if(falloutCorrectionMethod(Xvel, Yvel, Zvel)==1){
             fallpossible = false;
             exitPlay = true;
@@ -436,7 +432,7 @@ int ball_AI_Controller(){
     }
 
 
-    // above this is called every frame. but this increments the step every 24*1/90 seconds
+    // every 24/90 seconds these bools are set.
     if( NinetyHZCounter== 24){
             I++;
             NinetyHZCounter=0;  
@@ -446,34 +442,35 @@ int ball_AI_Controller(){
     }
 
 
-    // game stats 
+    // recording for game stats 
     Xpos=returns_ball_X_position();     
     Zpos=returns_ball_Z_position();
     XposGrid = Xpos-fmodf(Xpos, 1.0); 
     ZposGrid = Zpos-fmodf(Zpos, 1.0);
    
 
-
-    if(I<step_being_explored){              // reads tilt from array if not step being explored.
+    // Already chosen tilts are replayed.
+    if(I<step_being_explored){              
         X=options_chosen[I][0];
         Z=options_chosen[I][1];
         
     }
 
-    if(I == step_being_explored+1 && replayInt==1 ){ // this should make a loop when goal is achieved
+    // loops path replay after goal condition is met.
+    if(I == step_being_explored+1 && replayInt==1 ){ 
         exitPlay = true;
         return 0;
     }
 
-    if(I == step_being_explored && doneonceforexploration==false){ // calls the exploration method.
+    // Calls exploration method and gets reward for new steps
+    if(I == step_being_explored && doneonceforexploration==false){ 
         
         exploreOptions(Xvel, Zvel);
-
         doneonceforexploration = true;
     }
 
     
-    
+    // Exploration for steps AFTER the step current.
     if(I == step_being_explored+S && doneonceforevaluation == false){   // calls the evaluation one step later.
         evaluateOptions();
         doneonceforevaluation = true;
@@ -481,8 +478,8 @@ int ball_AI_Controller(){
     }
 
 
-
-    game_set_x(X);      // sets the tilts.
+    // sets table tilts.
+    game_set_x(X);      
     game_set_z(Z);
 
     return 0;
